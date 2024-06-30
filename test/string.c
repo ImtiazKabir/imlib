@@ -1,6 +1,3 @@
-#ifndef __STDC_VERSION__
-#define inline /* inline */
-#endif
 #include <criterion/criterion.h>
 
 #include "imlib/imclass.h"
