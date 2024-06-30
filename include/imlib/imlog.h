@@ -7,7 +7,8 @@
 
 /* clang-format off */
 #ifdef LOG_NO_COLOR
-#define imlogf1(level, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) _imlogf(level, fp, ____FILE____, ____LINE____, fmt, arg1)
+#define imlogf(level, fmt)                                                  _imlogf(level, fp, ____FILE____, ____LINE____, fmt)
+#define imlogf1(level, fmt, arg1)                                           _imlogf(level, fp, ____FILE____, ____LINE____, fmt, arg1)
 #define imlogf2(level, fmt, arg1, arg2)                                     _imlogf(level, fp, __FILE__, __LINE__, fmt, arg1, arg2)
 #define imlogf3(level, fmt, arg1, arg2, arg3)                               _imlogf(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3)
 #define imlogf4(level, fmt, arg1, arg2, arg3, arg4)                         _imlogf(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3, arg4)
@@ -16,6 +17,7 @@
 #define imlogf7(level, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7)       _imlogf(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 #define imlogf8(level, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) _imlogf(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
 
+#define imlog(level, fmt)                                                  _imlog(level, __FILE__, __LINE__, fmt)
 #define imlog1(level, fmt, arg1)                                           _imlog(level, __FILE__, __LINE__, fmt, arg1)
 #define imlog2(level, fmt, arg1, arg2)                                     _imlog(level, __FILE__, __LINE__, fmt, arg1, arg2)
 #define imlog3(level, fmt, arg1, arg2, arg3)                               _imlog(level, __FILE__, __LINE__, fmt, arg1, arg2, arg3)
@@ -26,6 +28,7 @@
 #define imlog8(level, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) _imlog(level, __FILE__, __LINE__, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
 #else /* !LOG_NO_COLOR */
 
+#define imlogf(level, fmt)                                                  _imlogfcol(level, fp, __FILE__, __LINE__, fmt)
 #define imlogf1(level, fmt, arg1)                                           _imlogfcol(level, fp, __FILE__, __LINE__, fmt, arg1)
 #define imlogf2(level, fmt, arg1, arg2)                                     _imlogfcol(level, fp, __FILE__, __LINE__, fmt, arg1, arg2)
 #define imlogf3(level, fmt, arg1, arg2, arg3)                               _imlogfcol(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3)
@@ -35,6 +38,7 @@
 #define imlogf7(level, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7)       _imlogfcol(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 #define imlogf8(level, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) _imlogfcol(level, fp, __FILE__, __LINE__, fmt, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
 
+#define imlog(level, fmt)                                                  _imlogcol(level, __FILE__, __LINE__, fmt)
 #define imlog1(level, fmt, arg1)                                           _imlogcol(level, __FILE__, __LINE__, fmt, arg1)
 #define imlog2(level, fmt, arg1, arg2)                                     _imlogcol(level, __FILE__, __LINE__, fmt, arg1, arg2)
 #define imlog3(level, fmt, arg1, arg2, arg3)                               _imlogcol(level, __FILE__, __LINE__, fmt, arg1, arg2, arg3)

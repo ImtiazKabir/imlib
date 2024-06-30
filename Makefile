@@ -129,12 +129,26 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
 src/e4c.o: src/e4c.c.o
 .PHONY : src/e4c.o
 
 # target to build an object file
 src/e4c.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/e4c.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/e4c.c.o
 .PHONY : src/e4c.c.o
 
 src/e4c.i: src/e4c.c.i
@@ -143,6 +157,7 @@ src/e4c.i: src/e4c.c.i
 # target to preprocess a source file
 src/e4c.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/e4c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/e4c.c.i
 .PHONY : src/e4c.c.i
 
 src/e4c.s: src/e4c.c.s
@@ -151,6 +166,7 @@ src/e4c.s: src/e4c.c.s
 # target to generate assembly for a file
 src/e4c.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/e4c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/e4c.c.s
 .PHONY : src/e4c.c.s
 
 src/imclass.o: src/imclass.c.o
@@ -159,6 +175,7 @@ src/imclass.o: src/imclass.c.o
 # target to build an object file
 src/imclass.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imclass.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imclass.c.o
 .PHONY : src/imclass.c.o
 
 src/imclass.i: src/imclass.c.i
@@ -167,6 +184,7 @@ src/imclass.i: src/imclass.c.i
 # target to preprocess a source file
 src/imclass.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imclass.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imclass.c.i
 .PHONY : src/imclass.c.i
 
 src/imclass.s: src/imclass.c.s
@@ -175,6 +193,7 @@ src/imclass.s: src/imclass.c.s
 # target to generate assembly for a file
 src/imclass.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imclass.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imclass.c.s
 .PHONY : src/imclass.c.s
 
 src/imerrno.o: src/imerrno.c.o
@@ -183,6 +202,7 @@ src/imerrno.o: src/imerrno.c.o
 # target to build an object file
 src/imerrno.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerrno.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerrno.c.o
 .PHONY : src/imerrno.c.o
 
 src/imerrno.i: src/imerrno.c.i
@@ -191,6 +211,7 @@ src/imerrno.i: src/imerrno.c.i
 # target to preprocess a source file
 src/imerrno.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerrno.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerrno.c.i
 .PHONY : src/imerrno.c.i
 
 src/imerrno.s: src/imerrno.c.s
@@ -199,6 +220,7 @@ src/imerrno.s: src/imerrno.c.s
 # target to generate assembly for a file
 src/imerrno.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerrno.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerrno.c.s
 .PHONY : src/imerrno.c.s
 
 src/imlog.o: src/imlog.c.o
@@ -207,6 +229,7 @@ src/imlog.o: src/imlog.c.o
 # target to build an object file
 src/imlog.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imlog.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imlog.c.o
 .PHONY : src/imlog.c.o
 
 src/imlog.i: src/imlog.c.i
@@ -215,6 +238,7 @@ src/imlog.i: src/imlog.c.i
 # target to preprocess a source file
 src/imlog.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imlog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imlog.c.i
 .PHONY : src/imlog.c.i
 
 src/imlog.s: src/imlog.c.s
@@ -223,6 +247,7 @@ src/imlog.s: src/imlog.c.s
 # target to generate assembly for a file
 src/imlog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imlog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imlog.c.s
 .PHONY : src/imlog.c.s
 
 src/immem.o: src/immem.c.o
@@ -231,6 +256,7 @@ src/immem.o: src/immem.c.o
 # target to build an object file
 src/immem.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/immem.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/immem.c.o
 .PHONY : src/immem.c.o
 
 src/immem.i: src/immem.c.i
@@ -239,6 +265,7 @@ src/immem.i: src/immem.c.i
 # target to preprocess a source file
 src/immem.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/immem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/immem.c.i
 .PHONY : src/immem.c.i
 
 src/immem.s: src/immem.c.s
@@ -247,6 +274,7 @@ src/immem.s: src/immem.c.s
 # target to generate assembly for a file
 src/immem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/immem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/immem.c.s
 .PHONY : src/immem.c.s
 
 src/imstr.o: src/imstr.c.o
@@ -255,6 +283,7 @@ src/imstr.o: src/imstr.c.o
 # target to build an object file
 src/imstr.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imstr.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imstr.c.o
 .PHONY : src/imstr.c.o
 
 src/imstr.i: src/imstr.c.i
@@ -263,6 +292,7 @@ src/imstr.i: src/imstr.c.i
 # target to preprocess a source file
 src/imstr.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imstr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imstr.c.i
 .PHONY : src/imstr.c.i
 
 src/imstr.s: src/imstr.c.s
@@ -271,6 +301,7 @@ src/imstr.s: src/imstr.c.s
 # target to generate assembly for a file
 src/imstr.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imstr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imstr.c.s
 .PHONY : src/imstr.c.s
 
 src/main.o: src/main.c.o
@@ -297,6 +328,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+test/string.o: test/string.c.o
+.PHONY : test/string.o
+
+# target to build an object file
+test/string.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/string.c.o
+.PHONY : test/string.c.o
+
+test/string.i: test/string.c.i
+.PHONY : test/string.i
+
+# target to preprocess a source file
+test/string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/string.c.i
+.PHONY : test/string.c.i
+
+test/string.s: test/string.c.s
+.PHONY : test/string.s
+
+# target to generate assembly for a file
+test/string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/string.c.s
+.PHONY : test/string.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +361,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... test"
 	@echo "... src/e4c.o"
 	@echo "... src/e4c.i"
 	@echo "... src/e4c.s"
@@ -327,6 +383,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... test/string.o"
+	@echo "... test/string.i"
+	@echo "... test/string.s"
 .PHONY : help
 
 
