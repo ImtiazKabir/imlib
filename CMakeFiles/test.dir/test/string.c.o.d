@@ -58,8 +58,5 @@ CMakeFiles/test.dir/test/string.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
- /home/imkabir/c_programming/imlib/include/e4c.h /usr/include/setjmp.h \
- /usr/include/bits/setjmp.h \
- /usr/include/bits/types/struct___jmp_buf_tag.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstr.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h

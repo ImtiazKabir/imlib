@@ -8,15 +8,11 @@
 
 #include "imerrno.h"
 
-#define E4C_NOKEYWORDS
-#include "e4c.h"
-
-E4C_DECLARE_EXCEPTION(PoorlyDefinedClassException);
-enum ImClassErr { IMCLASS_OK = IM_OK, IMERR_POORLY_DEFINED_CLASS };
+enum { IMCLASS_OK = IM_OK, IMERR_POORLY_DEFINED_CLASS };
 
 struct ImClass;
 
-PUBLIC struct ImClass const *imsup(struct ImClass const *klass);
+PUBLIC struct ImClass *imsup(struct ImClass *klass);
 
 PUBLIC ImBool imisof(void const *self, struct ImClass const *klass);
 
@@ -24,7 +20,7 @@ PUBLIC char *imtostr(void const *self);
 PUBLIC int imputobj(void const *self, FILE *fp);
 PUBLIC int imcomp(void const *a, void const *b);
 
-PUBLIC void *imnew(struct ImClass const *klass, ...);
+PUBLIC void *imnew(struct ImClass *klass, ...);
 
 /***************************** rule of three *********************************/
 PUBLIC int imdel(void *self);

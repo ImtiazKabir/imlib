@@ -33,12 +33,12 @@
 struct BlockHeader {
   union block_type {
     char const *hint;
-    struct ImClass const *klass;
+    struct ImClass *klass;
   } type;
   size_t nbytes;
   size_t allockey;
 };
 
-PROTECTED void *_imalloc_c(struct ImClass const *klass);
+PROTECTED void *_imalloc_c(struct ImClass *klass);
 
 #endif /* !IMMEM_PROT_H_ */

@@ -13,7 +13,7 @@ set_target_properties(main PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build
 )
 target_compile_options(main PRIVATE
-  -g3 -ggdb -Wno-dangling-else
+  -g3 -ggdb
   -Wall -Wextra -pedantic -Wparentheses -Wformat=2
   -Wshadow -Wwrite-strings -Wredundant-decls -Wmissing-include-dirs
   -pedantic-errors -Wuninitialized -Wmissing-declarations -Wconversion

@@ -15,4 +15,6 @@
 
 typedef enum { IM_FALSE, IM_TRUE } ImBool;
 
+#define REINTERPRET_CAST(type, value) *(type *)&value
+
 #endif /* !IMSTDINC_H_ */

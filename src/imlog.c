@@ -14,8 +14,8 @@ static char const *level_strings[] = {"TRACE", "DEBUG", "INFO",
 static char const *level_colors[] = {"\x1b[94m", "\x1b[36m", "\x1b[32m",
                                      "\x1b[33m", "\x1b[31m", "\x1b[35m"};
 
-PUBLIC void imlogvf(unsigned char level, FILE *fp, char const *file, int line,
-                    char const *fmt, va_list args) {
+PUBLIC void imlogvfbw(unsigned char level, FILE *fp, char const *file, int line,
+                      char const *fmt, va_list args) {
   auto time_t rawtime = {0};
   register struct tm const *timeinfo = NULL;
 
@@ -33,25 +33,25 @@ PUBLIC void imlogvf(unsigned char level, FILE *fp, char const *file, int line,
   (void)fprintf(fp, "\n");
 }
 
-PUBLIC void imlogv(unsigned char level, char const *file, int line,
-                   char const *fmt, va_list args) {
-  imlogvf(level, stdout, file, line, fmt, args);
+PUBLIC void imlogvbw(unsigned char level, char const *file, int line,
+                     char const *fmt, va_list args) {
+  imlogvfbw(level, stdout, file, line, fmt, args);
 }
 
-PUBLIC void _imlogf(unsigned char level, FILE *fp, char const *file, int line,
-                    char const *fmt, ...) {
+PUBLIC void imlogfbw(unsigned char level, FILE *fp, char const *file, int line,
+                     char const *fmt, ...) {
   auto va_list args = {0};
   va_start(args, fmt);
-  imlogvf(level, fp, file, line, fmt, args);
+  imlogvfbw(level, fp, file, line, fmt, args);
   va_end(args);
 }
 
-PUBLIC void _imlog(unsigned char level, char const *file, int line,
-                   char const *fmt, ...) {
+PUBLIC void imlogbw(unsigned char level, char const *file, int line,
+                    char const *fmt, ...) {
   auto va_list args = {0};
   FILE *fp = level < LMSK_WARN ? stdout : stderr;
   va_start(args, fmt);
-  imlogvf(level, fp, file, line, fmt, args);
+  imlogvfbw(level, fp, file, line, fmt, args);
   va_end(args);
 }
 
@@ -79,16 +79,16 @@ PUBLIC void imlogvcol(unsigned char level, char const *file, int line,
   imlogvfcol(level, stdout, file, line, fmt, args);
 }
 
-PUBLIC void _imlogfcol(unsigned char level, FILE *fp, char const *file,
-                       int line, char const *fmt, ...) {
+PUBLIC void imlogfcol(unsigned char level, FILE *fp, char const *file, int line,
+                      char const *fmt, ...) {
   auto va_list args = {0};
   va_start(args, fmt);
   imlogvfcol(level, fp, file, line, fmt, args);
   va_end(args);
 }
 
-PUBLIC void _imlogcol(unsigned char level, char const *file, int line,
-                      char const *fmt, ...) {
+PUBLIC void imlogcol(unsigned char level, char const *file, int line,
+                     char const *fmt, ...) {
   auto va_list args = {0};
   FILE *fp = level < LMSK_WARN ? stdout : stderr;
   va_start(args, fmt);

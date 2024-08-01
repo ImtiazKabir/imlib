@@ -4,21 +4,43 @@
 #include <stdarg.h>
 #include <stddef.h>
 
-struct ImClass {
-  char const *const type; /* has to be first for immem type union */
-  size_t const size;      /* same as immem size nbytes */
-  struct ImClass const *const super_class;
+#include "imparam.h"
+#include "imstdinc.h"
 
-  void (*const ctor)(void *self, va_list args);
+struct ImClass {
+  void (*class_init)(void);
+  char const *const type;
+  size_t size;
+
+  struct ImClass *super_class;
+  void (*super_params)(struct ImParams *sup_args, struct ImParams *self_args);
+
+  void (*ctor)(void *self, struct ImParams *args);
 
   /*************************** rule of three *********************************/
-  void (*const dtor)(void *self);
-  void (*const clone)(void *self, void const *from);
-  void (*const assign)(void *self, void const *from);
-  int (*const compare)(void const *a, void const *b);
+  void (*dtor)(void *self);
+  void (*clone)(void *self, void const *from);
+  void (*assign)(void *self, void const *from);
+  int (*compare)(void const *a, void const *b);
   /***************************************************************************/
 
-  char *(*const tostr)(register void const *const self);
+  char *(*tostr)(register void const *const self);
 };
+
+#define CLASS(k)                                                               \
+  PRIVATE void __##k##_Init__(void);                                           \
+  static struct ImClass _##k = {__##k##_Init__,                                \
+                                "CLASS(" #k ")",                               \
+                                0u,                                            \
+                                NULL,                                          \
+                                NULL,                                          \
+                                NULL,                                          \
+                                NULL,                                          \
+                                NULL,                                          \
+                                NULL,                                          \
+                                NULL,                                          \
+                                NULL};                                         \
+  struct ImClass *const k = &_##k;                                             \
+  PRIVATE void __##k##_Init__(void)
 
 #endif /* !IMCLASS_PROT_H_ */

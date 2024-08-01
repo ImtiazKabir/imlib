@@ -12,31 +12,25 @@
 #include "imlib/imclass_prot.h"
 
 #include "imlib/imerrno.h"
+#include "imlib/imparam.h"
 #include "imlib/imstdinc.h"
-
-#define E4C_NOKEYWORDS
-#include "e4c.h"
-
-E4C_DEFINE_EXCEPTION(IndexOutOfBoundException, "Index out of bound",
-                     IllegalArgumentException);
 
 #define IMSTR_INITIAL_CAPACITY 16u
 
 struct ImStr {
-  char *str; /* has to be first */
+  char *str;
   size_t length;
   size_t capacity;
 };
 
 PRIVATE void __constructor__(register void *const _self,
-                             register va_list args) {
+                             register struct ImParams *args) {
   register struct ImStr *const self = _self;
-  register char const *const fmt = va_arg(args, char const *);
 
+  (void)args;
   self->capacity = IMSTR_INITIAL_CAPACITY;
   self->length = 0u;
   self->str = imalloct("String", self->capacity * sizeof(char));
-  ImStr_VAppendFmt(self, fmt, args);
 }
 
 PRIVATE void __destructor__(register void *const _self) {
@@ -154,14 +148,8 @@ PUBLIC int ImStr_InsertAt(register struct ImStr *const self,
   register size_t const len = strlen(cstr);
 
   if (index > self->length) {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) {
-      imerr(IMSTR_INDEX_OUT_OF_BOUND, "Index out of bound");
-      E4C_THROW(IndexOutOfBoundException, NULL);
-    }
-    if (status != 0) {
-      return imerrno();
-    }
+    imerr(IMSTR_INDEX_OUT_OF_BOUND, "Index out of bound");
+    return imerrno();
   }
 
   __ensure_capacity__(self, self->length + len + 1u);
@@ -176,25 +164,13 @@ PUBLIC int ImStr_Delete(register struct ImStr *const self,
                         register size_t const start,
                         register size_t const end) {
   if ((start > self->length) || (end > self->length)) {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) {
-      imerr(IMSTR_INDEX_OUT_OF_BOUND, "Index out of bound");
-      E4C_THROW(IndexOutOfBoundException, NULL);
-    }
-    if (status != 0) {
-      return imerrno();
-    }
+    imerr(IMSTR_INDEX_OUT_OF_BOUND, "Index out of bound");
+    return imerrno();
   }
 
   if (start > end) {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) {
-      imerr(IMERR_ILLEGAL_ARG, "start index > end index");
-      E4C_THROW(IllegalArgumentException, "start index > end index");
-    }
-    if (status != 0) {
-      return imerrno();
-    }
+    imerr(IMERR_ILLEGAL_ARG, "start index > end index");
+    return imerrno();
   }
 
   memmove(self->str + start, self->str + end, self->length - end + 1u);
@@ -205,14 +181,8 @@ PUBLIC int ImStr_SetCharAt(register struct ImStr *const self,
                            register size_t index, register char const c) {
   /* TODO do something about writing '\0' maybe? */
   if (index >= self->length) {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) {
-      imerr(IMSTR_INDEX_OUT_OF_BOUND, "Index out of bound");
-      E4C_THROW(IndexOutOfBoundException, NULL);
-    }
-    if (status != 0) {
-      return imerrno();
-    }
+    imerr(IMSTR_INDEX_OUT_OF_BOUND, "Index out of bound");
+    return imerrno();
   }
 
   self->str[index] = c;
@@ -223,9 +193,12 @@ PUBLIC size_t ImStr_Length(register struct ImStr *const self) {
   return self->length;
 }
 
-static struct ImClass _ImStr = {
-    "Class(ImStr)",  sizeof(struct ImStr), NULL,
-    __constructor__, __destructor__,       __clone__,
-    __assign__,      __compare__,          __tostr__};
-
-struct ImClass const *ImStr = &_ImStr;
+CLASS(ImStr) {
+  _ImStr.size = sizeof(struct ImStr);
+  _ImStr.ctor = __constructor__;
+  _ImStr.dtor = __destructor__;
+  _ImStr.clone = __clone__;
+  _ImStr.assign = __assign__;
+  _ImStr.compare = __compare__;
+  _ImStr.tostr = __tostr__;
+}

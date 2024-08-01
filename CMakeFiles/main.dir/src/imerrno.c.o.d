@@ -43,4 +43,6 @@ CMakeFiles/main.dir/src/imerrno.c.o: \
  /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
  /usr/include/bits/types/struct_timeval.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
- /usr/include/strings.h
+ /usr/include/strings.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h

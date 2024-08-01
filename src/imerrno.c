@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "imlib/imlog.h"
 #include "imlib/imstdinc.h"
 
 /* Thread-local storage keys for error code and error message */
@@ -83,5 +84,12 @@ PUBLIC void imclrerr(void) {
   if (msg != NULL) {
     free(msg);
     pthread_setspecific(errmsg_key, NULL);
+  }
+}
+
+PUBLIC void imperrror(char const *str) {
+  char *msg = pthread_getspecific(errmsg_key);
+  if ((msg != NULL) && (*msg != '\0')) {
+    imlogf2(LOG_ERROR, stderr, "%s: %s\n", str, msg);
   }
 }

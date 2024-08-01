@@ -1,12 +1,12 @@
 CMakeFiles/main.dir/src/main.c.o: \
  /home/imkabir/c_programming/imlib/src/main.c /usr/include/stdc-predef.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/types/__fpos_t.h \
  /usr/include/bits/types/__mbstate_t.h \
@@ -30,21 +30,29 @@ CMakeFiles/main.dir/src/main.c.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h \
+ /usr/include/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
- /home/imkabir/c_programming/imlib/include/e4c.h /usr/include/setjmp.h \
- /usr/include/bits/setjmp.h \
- /usr/include/bits/types/struct___jmp_buf_tag.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdbool.h \
- /home/imkabir/c_programming/imlib/include/imlib/immem.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imclass_prot.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imerror.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
- /home/imkabir/c_programming/imlib/include/imlib/imstr.h \
- /usr/include/string.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
- /usr/include/time.h /usr/include/bits/time.h \
- /usr/include/bits/types/struct_tm.h \
- /usr/include/bits/types/struct_itimerspec.h \
- /home/imkabir/c_programming/imlib/include/imlib/imlog.h
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h \
+ /home/imkabir/c_programming/imlib/include/imlib/immem.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imoption.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdbool.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/bits/stdint-least.h \
+ /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
+ /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imresult.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imerror.h \
+ /home/imkabir/c_programming/imlib/include/imlib/immem.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imstr.h

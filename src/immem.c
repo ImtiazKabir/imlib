@@ -7,21 +7,9 @@
 #include "imlib/imclass.h"
 #include "imlib/imclass_prot.h"
 #include "imlib/imerrno.h"
+#include "imlib/imlog.h"
 #include "imlib/immem_prot.h"
 #include "imlib/imstdinc.h"
-
-#define E4C_NOKEYWORDS
-#include "e4c.h"
-
-E4C_DEFINE_EXCEPTION(
-    NotImMemoryException,
-    "Either 1) this memory was not allocated by Imlib, 2) it is not "
-    "the beginning of allocated memory or 3) it is already freed once",
-    RuntimeException);
-
-E4C_DEFINE_EXCEPTION(NotAClassException,
-                     "This is not the beginning of a class memory region",
-                     RuntimeException);
 
 PRIVATE struct BlockHeader *__imalloc_common__(register size_t const nbytes) {
   register struct BlockHeader *const header =
@@ -29,7 +17,7 @@ PRIVATE struct BlockHeader *__imalloc_common__(register size_t const nbytes) {
 
   if (header == NULL) {
     imerr(IMERR_NOT_ENOUGH_MEM, "Could not allocate memory");
-    E4C_THROW(NotEnoughMemoryException, "Could not allocate memory");
+    return NULL;
   }
   header->nbytes = nbytes;
   return header;
@@ -41,12 +29,9 @@ PUBLIC void *imalloct(register char const *const type,
 
   register struct BlockHeader *header = NULL;
 
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) { header = __imalloc_common__(nbytes); }
-    if (status == -1) {
-      return NULL;
-    }
+  header = __imalloc_common__(nbytes);
+  if (header == NULL) {
+    return NULL;
   }
 
   header->allockey = DATA_ALLOC_KEY;
@@ -59,21 +44,20 @@ PUBLIC void *imalloc(register size_t const nbytes) {
   return imalloct("Any", nbytes);
 }
 
-PROTECTED void *_imalloc_c(register struct ImClass const *const klass) {
+PROTECTED void *_imalloc_c(register struct ImClass *const klass) {
   /* Return a newable memory region of nbytes.
    * This function is not supposed to be used by client directly.
    * Use imnew instead.
    */
 
-  register size_t const nbytes = klass->size;
+  register size_t nbytes = 0u;
   register struct BlockHeader *header = NULL;
 
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) { header = __imalloc_common__(nbytes); }
-    if (status == -1) {
-      return NULL;
-    }
+  nbytes = klass->size;
+
+  header = __imalloc_common__(nbytes);
+  if (header == NULL) {
+    return NULL;
   }
 
   header->allockey = CLASS_ALLOC_KEY;
@@ -81,18 +65,18 @@ PROTECTED void *_imalloc_c(register struct ImClass const *const klass) {
   return (void *)(((char *)header) + sizeof(struct BlockHeader));
 }
 
-PRIVATE struct BlockHeader const *
+PRIVATE struct BlockHeader *
 __get_header__(register void const *const client_data) {
-  return (struct BlockHeader const *)(((char const *)client_data) -
-                                      sizeof(struct BlockHeader));
+  return (struct BlockHeader *)(((char const *)client_data) -
+                                sizeof(struct BlockHeader));
 }
 
-PRIVATE void __immem_check__(register struct BlockHeader const *const header) {
+PRIVATE ImBool __is_immem__(register struct BlockHeader const *const header) {
   if ((header->allockey != DATA_ALLOC_KEY) &&
       (header->allockey != CLASS_ALLOC_KEY)) {
-    imerr(IMERR_NOT_IMMEM, "Memory not allocated by ImLib");
-    E4C_THROW(NotImMemoryException, NULL);
+    return IM_FALSE;
   }
+  return IM_TRUE;
 }
 
 PUBLIC void *imrealloc(register void *const client_data,
@@ -107,12 +91,8 @@ PUBLIC void *imrealloc(register void *const client_data,
   }
 
   prev_header = __get_header__(client_data);
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) { __immem_check__(prev_header); }
-    if (status != 0) {
-      return NULL;
-    }
+  if (__is_immem__(prev_header) == IM_FALSE) {
+    return NULL;
   }
 
   allockey = prev_header->allockey;
@@ -129,17 +109,14 @@ PUBLIC void *imrealloc(register void *const client_data,
 
 PUBLIC int imfree(register void *const client_data) {
   if (client_data != NULL) {
-    register struct BlockHeader const *const header =
-        __get_header__(client_data);
+    register struct BlockHeader *const header = __get_header__(client_data);
 
-    {
-      register volatile int status = 0;
-      E4C_REUSING_CONTEXT(status, -1) { __immem_check__(header); }
-      if (status != 0) {
-        return imerrno();
-      }
+    if (__is_immem__(header) == IM_FALSE) {
+      imerr(IMERR_NOT_IMMEM, "Data was not allocated by imlib");
+      return imerrno();
     }
 
+    (void)memset(header, 0, sizeof(struct BlockHeader) + header->nbytes);
     free((void *)header);
   }
   return IM_OK;
@@ -147,25 +124,22 @@ PUBLIC int imfree(register void *const client_data) {
 
 PUBLIC size_t imsize(register void *const client_data) {
   register struct BlockHeader const *const header = __get_header__(client_data);
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) { __immem_check__(header); }
-    if (status != 0) {
-      return 0u;
-    }
+
+  if (__is_immem__(header) == IM_FALSE) {
+    imerr(IMERR_NOT_IMMEM, "Data was not allocated by imlib");
+    return 0u;
   }
   return header->nbytes;
 }
 
 PUBLIC char const *imtype(register void *const client_data) {
   register struct BlockHeader const *const header = __get_header__(client_data);
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) { __immem_check__(header); }
-    if (status != 0) {
-      return NULL;
-    }
+
+  if (__is_immem__(header) == IM_FALSE) {
+    imerr(IMERR_NOT_IMMEM, "Data was not allocated by imlib");
+    return NULL;
   }
+
   if (header->allockey == DATA_ALLOC_KEY) {
     return header->type.hint;
   } else {
@@ -174,27 +148,22 @@ PUBLIC char const *imtype(register void *const client_data) {
   }
 }
 
-PUBLIC struct ImClass const *imclass(register void const *const client_data) {
+PUBLIC struct ImClass *imclass(register void const *const client_data) {
   register struct BlockHeader const *const header = __get_header__(client_data);
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) { __immem_check__(header); }
-    if (status != 0) {
-      return NULL;
-    }
+
+  if (__is_immem__(header) == IM_FALSE) {
+    imerr(IMERR_NOT_IMMEM, "Data was not allocated by imlib");
+    return NULL;
   }
 
-  {
-    register volatile int status = 0;
-    E4C_REUSING_CONTEXT(status, -1) {
-      if (header->allockey != CLASS_ALLOC_KEY) {
-        E4C_THROW(NotAClassException, NULL);
-      }
-    }
-    if (status != 0) {
-      imerr(IMERR_NOT_A_CLASS, "Data not a class");
-      return NULL;
-    }
+  if (header->allockey != CLASS_ALLOC_KEY) {
+    imerr(IMERR_NOT_A_CLASS, "Data not a class");
+    return NULL;
+  }
+
+  if (header->type.klass->class_init != NULL) {
+    header->type.klass->class_init();
+    header->type.klass->class_init = NULL;
   }
 
   return header->type.klass;

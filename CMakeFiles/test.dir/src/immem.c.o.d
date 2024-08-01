@@ -36,13 +36,11 @@ CMakeFiles/test.dir/src/immem.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
- /home/imkabir/c_programming/imlib/include/e4c.h /usr/include/setjmp.h \
- /usr/include/bits/setjmp.h \
- /usr/include/bits/types/struct___jmp_buf_tag.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdbool.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass_prot.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h \
  /home/imkabir/c_programming/imlib/include/imlib/immem_prot.h

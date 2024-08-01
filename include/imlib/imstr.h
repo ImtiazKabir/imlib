@@ -8,16 +8,11 @@
 
 #include "imerrno.h"
 
-#define E4C_NOKEYWORDS
-#include "e4c.h"
-
 enum ImStrErr { IMSTR_OK = IM_OK, IMSTR_INDEX_OUT_OF_BOUND };
-
-E4C_DECLARE_EXCEPTION(IndexOutOfBoundException);
 
 struct ImStr;
 
-extern struct ImClass const *ImStr;
+extern struct ImClass *const ImStr;
 
 PUBLIC char const *ImStr_View(struct ImStr const *self);
 PUBLIC void ImStr_Append(struct ImStr *self, char const *cstr);

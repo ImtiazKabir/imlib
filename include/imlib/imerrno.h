@@ -7,16 +7,10 @@
 
 enum Err { IM_OK, IMERR_ILLEGAL_ARG };
 
-/* Set the thread-local error code and message */
 PUBLIC void imerr(int errcode, char const *errmsg);
-
-/* Get the current thread-local error code */
 PUBLIC int imerrno(void);
-
-/* Get the current thread-local error message */
 PUBLIC char const *imerrmsg(void);
-
-/* Clear the error code and message */
 PUBLIC void imclrerr(void);
+PUBLIC void imperrror(char const *str);
 
 #endif /* IMERRNO_H_ */
