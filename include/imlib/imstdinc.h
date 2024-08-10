@@ -17,4 +17,11 @@ typedef enum { IM_FALSE, IM_TRUE } ImBool;
 
 #define REINTERPRET_CAST(type, value) *(type *)&value
 
+#define FOR(D, S, B)                                                           \
+  {                                                                            \
+    D;                                                                         \
+    for (S)                                                                    \
+      B                                                                        \
+  }
+
 #endif /* !IMSTDINC_H_ */

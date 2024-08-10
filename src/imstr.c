@@ -12,6 +12,7 @@
 #include "imlib/imclass_prot.h"
 
 #include "imlib/imerrno.h"
+#include "imlib/impanic.h"
 #include "imlib/imparam.h"
 #include "imlib/imstdinc.h"
 
@@ -23,23 +24,29 @@ struct ImStr {
   size_t capacity;
 };
 
-PRIVATE void __constructor__(register void *const _self,
-                             register struct ImParams *args) {
-  register struct ImStr *const self = _self;
-
-  (void)args;
+PRIVATE void __init__(struct ImStr *self) {
   self->capacity = IMSTR_INITIAL_CAPACITY;
   self->length = 0u;
   self->str = imalloct("String", self->capacity * sizeof(char));
 }
 
-PRIVATE void __destructor__(register void *const _self) {
-  register struct ImStr *const self = _self;
+PRIVATE void __deinit__(struct ImStr *self) {
   imfree(self->str);
   self->str = NULL;
   self->length = 0u;
   self->capacity = IMSTR_INITIAL_CAPACITY;
 }
+
+PRIVATE void __constructor__(register void *const self,
+                             register struct ImParams *args) {
+  if (ImParams_Match(args, 0u) == IM_FALSE) {
+    impanic("%s\n", "ImStr constructor does not take any parameter");
+  }
+
+  __init__(self);
+}
+
+PRIVATE void __destructor__(register void *const self) { __deinit__(self); }
 
 PRIVATE void __clone__(register void *const _self,
                        register void const *const _from) {
@@ -100,7 +107,7 @@ PUBLIC void ImStr_Append(register struct ImStr *const self,
   register size_t len = strlen(cstr);
   __ensure_capacity__(self, self->length + len + 1u);
   (void)strcpy(self->str + self->length, cstr);
-  self->length = len;
+  self->length += len;
 }
 
 PUBLIC void ImStr_AppendChar(register struct ImStr *const self,

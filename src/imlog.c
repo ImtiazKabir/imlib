@@ -5,6 +5,7 @@
 #include <string.h>
 #include <time.h>
 
+#include "imlib/imio.h"
 #include "imlib/imstdinc.h"
 
 static unsigned char log_levelmsk = LMSK_ALL;
@@ -26,11 +27,11 @@ PUBLIC void imlogvfbw(unsigned char level, FILE *fp, char const *file, int line,
   time(&rawtime);
   timeinfo = localtime(&rawtime);
 
-  (void)fprintf(fp, "%02d:%02d:%02d %-5s %s:%d: ", timeinfo->tm_hour,
-                timeinfo->tm_min, timeinfo->tm_sec, level_strings[level], file,
-                line);
-  (void)vfprintf(fp, fmt, args);
-  (void)fprintf(fp, "\n");
+  (void)imfprintf(fp, "%02d:%02d:%02d %-5s %s:%d: ", timeinfo->tm_hour,
+                  timeinfo->tm_min, timeinfo->tm_sec, level_strings[level],
+                  file, line);
+  (void)imvfprintf(fp, fmt, args);
+  (void)imfprintf(fp, "\n");
 }
 
 PUBLIC void imlogvbw(unsigned char level, char const *file, int line,
@@ -67,11 +68,11 @@ PUBLIC void imlogvfcol(unsigned char level, FILE *fp, char const *file,
   time(&rawtime);
   timeinfo = localtime(&rawtime);
 
-  (void)fprintf(fp, "%02d:%02d:%02d\x1b[0m %s%-5s \x1b[90m%s:%d:\x1b[0m ",
-                timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec,
-                level_colors[level], level_strings[level], file, line);
-  (void)vfprintf(fp, fmt, args);
-  (void)fprintf(fp, "\n");
+  (void)imfprintf(fp, "%02d:%02d:%02d\x1b[0m %s%-5s \x1b[90m%s:%d:\x1b[0m ",
+                  timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec,
+                  level_colors[level], level_strings[level], file, line);
+  (void)imvfprintf(fp, fmt, args);
+  (void)imfprintf(fp, "\n");
 }
 
 PUBLIC void imlogvcol(unsigned char level, char const *file, int line,

@@ -117,38 +117,122 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named imlib
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+imlib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imlib
+.PHONY : imlib
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+imlib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/build
+.PHONY : imlib/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named inheritance
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
+inheritance: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inheritance
+.PHONY : inheritance
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+inheritance/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/build
+.PHONY : inheritance/fast
+
+#=============================================================================
+# Target rules for targets named ll
+
+# Build rule for target.
+ll: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ll
+.PHONY : ll
+
+# fast build rule for target.
+ll/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ll.dir/build.make CMakeFiles/ll.dir/build
+.PHONY : ll/fast
+
+examples/inheritance.o: examples/inheritance.c.o
+.PHONY : examples/inheritance.o
+
+# target to build an object file
+examples/inheritance.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/examples/inheritance.c.o
+.PHONY : examples/inheritance.c.o
+
+examples/inheritance.i: examples/inheritance.c.i
+.PHONY : examples/inheritance.i
+
+# target to preprocess a source file
+examples/inheritance.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/examples/inheritance.c.i
+.PHONY : examples/inheritance.c.i
+
+examples/inheritance.s: examples/inheritance.c.s
+.PHONY : examples/inheritance.s
+
+# target to generate assembly for a file
+examples/inheritance.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/examples/inheritance.c.s
+.PHONY : examples/inheritance.c.s
+
+examples/ll.o: examples/ll.c.o
+.PHONY : examples/ll.o
+
+# target to build an object file
+examples/ll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ll.dir/build.make CMakeFiles/ll.dir/examples/ll.c.o
+.PHONY : examples/ll.c.o
+
+examples/ll.i: examples/ll.c.i
+.PHONY : examples/ll.i
+
+# target to preprocess a source file
+examples/ll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ll.dir/build.make CMakeFiles/ll.dir/examples/ll.c.i
+.PHONY : examples/ll.c.i
+
+examples/ll.s: examples/ll.c.s
+.PHONY : examples/ll.s
+
+# target to generate assembly for a file
+examples/ll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ll.dir/build.make CMakeFiles/ll.dir/examples/ll.c.s
+.PHONY : examples/ll.c.s
+
+src/imbox.o: src/imbox.c.o
+.PHONY : src/imbox.o
+
+# target to build an object file
+src/imbox.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imbox.c.o
+.PHONY : src/imbox.c.o
+
+src/imbox.i: src/imbox.c.i
+.PHONY : src/imbox.i
+
+# target to preprocess a source file
+src/imbox.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imbox.c.i
+.PHONY : src/imbox.c.i
+
+src/imbox.s: src/imbox.c.s
+.PHONY : src/imbox.s
+
+# target to generate assembly for a file
+src/imbox.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imbox.c.s
+.PHONY : src/imbox.c.s
 
 src/imclass.o: src/imclass.c.o
 .PHONY : src/imclass.o
 
 # target to build an object file
 src/imclass.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imclass.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imclass.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imclass.c.o
 .PHONY : src/imclass.c.o
 
 src/imclass.i: src/imclass.c.i
@@ -156,8 +240,7 @@ src/imclass.i: src/imclass.c.i
 
 # target to preprocess a source file
 src/imclass.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imclass.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imclass.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imclass.c.i
 .PHONY : src/imclass.c.i
 
 src/imclass.s: src/imclass.c.s
@@ -165,8 +248,7 @@ src/imclass.s: src/imclass.c.s
 
 # target to generate assembly for a file
 src/imclass.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imclass.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imclass.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imclass.c.s
 .PHONY : src/imclass.c.s
 
 src/imerrno.o: src/imerrno.c.o
@@ -174,8 +256,7 @@ src/imerrno.o: src/imerrno.c.o
 
 # target to build an object file
 src/imerrno.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerrno.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerrno.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imerrno.c.o
 .PHONY : src/imerrno.c.o
 
 src/imerrno.i: src/imerrno.c.i
@@ -183,8 +264,7 @@ src/imerrno.i: src/imerrno.c.i
 
 # target to preprocess a source file
 src/imerrno.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerrno.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerrno.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imerrno.c.i
 .PHONY : src/imerrno.c.i
 
 src/imerrno.s: src/imerrno.c.s
@@ -192,8 +272,7 @@ src/imerrno.s: src/imerrno.c.s
 
 # target to generate assembly for a file
 src/imerrno.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerrno.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerrno.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imerrno.c.s
 .PHONY : src/imerrno.c.s
 
 src/imerror.o: src/imerror.c.o
@@ -201,8 +280,7 @@ src/imerror.o: src/imerror.c.o
 
 # target to build an object file
 src/imerror.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerror.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerror.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imerror.c.o
 .PHONY : src/imerror.c.o
 
 src/imerror.i: src/imerror.c.i
@@ -210,8 +288,7 @@ src/imerror.i: src/imerror.c.i
 
 # target to preprocess a source file
 src/imerror.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerror.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerror.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imerror.c.i
 .PHONY : src/imerror.c.i
 
 src/imerror.s: src/imerror.c.s
@@ -219,17 +296,39 @@ src/imerror.s: src/imerror.c.s
 
 # target to generate assembly for a file
 src/imerror.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imerror.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imerror.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imerror.c.s
 .PHONY : src/imerror.c.s
+
+src/imio.o: src/imio.c.o
+.PHONY : src/imio.o
+
+# target to build an object file
+src/imio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imio.c.o
+.PHONY : src/imio.c.o
+
+src/imio.i: src/imio.c.i
+.PHONY : src/imio.i
+
+# target to preprocess a source file
+src/imio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imio.c.i
+.PHONY : src/imio.c.i
+
+src/imio.s: src/imio.c.s
+.PHONY : src/imio.s
+
+# target to generate assembly for a file
+src/imio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imio.c.s
+.PHONY : src/imio.c.s
 
 src/imlog.o: src/imlog.c.o
 .PHONY : src/imlog.o
 
 # target to build an object file
 src/imlog.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imlog.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imlog.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imlog.c.o
 .PHONY : src/imlog.c.o
 
 src/imlog.i: src/imlog.c.i
@@ -237,8 +336,7 @@ src/imlog.i: src/imlog.c.i
 
 # target to preprocess a source file
 src/imlog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imlog.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imlog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imlog.c.i
 .PHONY : src/imlog.c.i
 
 src/imlog.s: src/imlog.c.s
@@ -246,8 +344,7 @@ src/imlog.s: src/imlog.c.s
 
 # target to generate assembly for a file
 src/imlog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imlog.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imlog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imlog.c.s
 .PHONY : src/imlog.c.s
 
 src/immem.o: src/immem.c.o
@@ -255,8 +352,7 @@ src/immem.o: src/immem.c.o
 
 # target to build an object file
 src/immem.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/immem.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/immem.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/immem.c.o
 .PHONY : src/immem.c.o
 
 src/immem.i: src/immem.c.i
@@ -264,8 +360,7 @@ src/immem.i: src/immem.c.i
 
 # target to preprocess a source file
 src/immem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/immem.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/immem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/immem.c.i
 .PHONY : src/immem.c.i
 
 src/immem.s: src/immem.c.s
@@ -273,8 +368,7 @@ src/immem.s: src/immem.c.s
 
 # target to generate assembly for a file
 src/immem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/immem.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/immem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/immem.c.s
 .PHONY : src/immem.c.s
 
 src/impanic.o: src/impanic.c.o
@@ -282,8 +376,7 @@ src/impanic.o: src/impanic.c.o
 
 # target to build an object file
 src/impanic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/impanic.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/impanic.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/impanic.c.o
 .PHONY : src/impanic.c.o
 
 src/impanic.i: src/impanic.c.i
@@ -291,8 +384,7 @@ src/impanic.i: src/impanic.c.i
 
 # target to preprocess a source file
 src/impanic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/impanic.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/impanic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/impanic.c.i
 .PHONY : src/impanic.c.i
 
 src/impanic.s: src/impanic.c.s
@@ -300,8 +392,7 @@ src/impanic.s: src/impanic.c.s
 
 # target to generate assembly for a file
 src/impanic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/impanic.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/impanic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/impanic.c.s
 .PHONY : src/impanic.c.s
 
 src/imparam.o: src/imparam.c.o
@@ -309,8 +400,7 @@ src/imparam.o: src/imparam.c.o
 
 # target to build an object file
 src/imparam.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imparam.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imparam.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imparam.c.o
 .PHONY : src/imparam.c.o
 
 src/imparam.i: src/imparam.c.i
@@ -318,8 +408,7 @@ src/imparam.i: src/imparam.c.i
 
 # target to preprocess a source file
 src/imparam.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imparam.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imparam.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imparam.c.i
 .PHONY : src/imparam.c.i
 
 src/imparam.s: src/imparam.c.s
@@ -327,8 +416,7 @@ src/imparam.s: src/imparam.c.s
 
 # target to generate assembly for a file
 src/imparam.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imparam.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imparam.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imparam.c.s
 .PHONY : src/imparam.c.s
 
 src/imstr.o: src/imstr.c.o
@@ -336,8 +424,7 @@ src/imstr.o: src/imstr.c.o
 
 # target to build an object file
 src/imstr.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imstr.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imstr.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imstr.c.o
 .PHONY : src/imstr.c.o
 
 src/imstr.i: src/imstr.c.i
@@ -345,8 +432,7 @@ src/imstr.i: src/imstr.c.i
 
 # target to preprocess a source file
 src/imstr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imstr.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imstr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imstr.c.i
 .PHONY : src/imstr.c.i
 
 src/imstr.s: src/imstr.c.s
@@ -354,57 +440,80 @@ src/imstr.s: src/imstr.c.s
 
 # target to generate assembly for a file
 src/imstr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/imstr.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imstr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imstr.c.s
 .PHONY : src/imstr.c.s
 
-src/main.o: src/main.c.o
-.PHONY : src/main.o
+src/imwrap.o: src/imwrap.c.o
+.PHONY : src/imwrap.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/imwrap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imwrap.c.o
+.PHONY : src/imwrap.c.o
 
-src/main.i: src/main.c.i
-.PHONY : src/main.i
+src/imwrap.i: src/imwrap.c.i
+.PHONY : src/imwrap.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/imwrap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imwrap.c.i
+.PHONY : src/imwrap.c.i
 
-src/main.s: src/main.c.s
-.PHONY : src/main.s
+src/imwrap.s: src/imwrap.c.s
+.PHONY : src/imwrap.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/imwrap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imwrap.c.s
+.PHONY : src/imwrap.c.s
 
-test/string.o: test/string.c.o
-.PHONY : test/string.o
+src/linkedlist.o: src/linkedlist.c.o
+.PHONY : src/linkedlist.o
 
 # target to build an object file
-test/string.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/string.c.o
-.PHONY : test/string.c.o
+src/linkedlist.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/linkedlist.c.o
+.PHONY : src/linkedlist.c.o
 
-test/string.i: test/string.c.i
-.PHONY : test/string.i
+src/linkedlist.i: src/linkedlist.c.i
+.PHONY : src/linkedlist.i
 
 # target to preprocess a source file
-test/string.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/string.c.i
-.PHONY : test/string.c.i
+src/linkedlist.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/linkedlist.c.i
+.PHONY : src/linkedlist.c.i
 
-test/string.s: test/string.c.s
-.PHONY : test/string.s
+src/linkedlist.s: src/linkedlist.c.s
+.PHONY : src/linkedlist.s
 
 # target to generate assembly for a file
-test/string.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/string.c.s
-.PHONY : test/string.c.s
+src/linkedlist.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/linkedlist.c.s
+.PHONY : src/linkedlist.c.s
+
+src/list.o: src/list.c.o
+.PHONY : src/list.o
+
+# target to build an object file
+src/list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/list.c.o
+.PHONY : src/list.c.o
+
+src/list.i: src/list.c.i
+.PHONY : src/list.i
+
+# target to preprocess a source file
+src/list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/list.c.i
+.PHONY : src/list.c.i
+
+src/list.s: src/list.c.s
+.PHONY : src/list.s
+
+# target to generate assembly for a file
+src/list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/list.c.s
+.PHONY : src/list.c.s
 
 # Help Target
 help:
@@ -414,8 +523,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... test"
+	@echo "... imlib"
+	@echo "... inheritance"
+	@echo "... ll"
+	@echo "... examples/inheritance.o"
+	@echo "... examples/inheritance.i"
+	@echo "... examples/inheritance.s"
+	@echo "... examples/ll.o"
+	@echo "... examples/ll.i"
+	@echo "... examples/ll.s"
+	@echo "... src/imbox.o"
+	@echo "... src/imbox.i"
+	@echo "... src/imbox.s"
 	@echo "... src/imclass.o"
 	@echo "... src/imclass.i"
 	@echo "... src/imclass.s"
@@ -425,6 +544,9 @@ help:
 	@echo "... src/imerror.o"
 	@echo "... src/imerror.i"
 	@echo "... src/imerror.s"
+	@echo "... src/imio.o"
+	@echo "... src/imio.i"
+	@echo "... src/imio.s"
 	@echo "... src/imlog.o"
 	@echo "... src/imlog.i"
 	@echo "... src/imlog.s"
@@ -440,12 +562,15 @@ help:
 	@echo "... src/imstr.o"
 	@echo "... src/imstr.i"
 	@echo "... src/imstr.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... test/string.o"
-	@echo "... test/string.i"
-	@echo "... test/string.s"
+	@echo "... src/imwrap.o"
+	@echo "... src/imwrap.i"
+	@echo "... src/imwrap.s"
+	@echo "... src/linkedlist.o"
+	@echo "... src/linkedlist.i"
+	@echo "... src/linkedlist.s"
+	@echo "... src/list.o"
+	@echo "... src/list.i"
+	@echo "... src/list.s"
 .PHONY : help
 
 

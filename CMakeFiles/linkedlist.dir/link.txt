@@ -1,0 +1,1 @@
+/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment CMakeFiles/linkedlist.dir/examples/linkedlist.c.o -o examples/linkedlist  lib/libimlib.a

@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/imkabir/c_programming/imlib/include
 
-C_FLAGS = -g -g3 -ggdb -Wall -Wextra -pedantic -Wparentheses -Wformat=2 -Wshadow -Wwrite-strings -Wredundant-decls -Wmissing-include-dirs -pedantic-errors -Wuninitialized -Wmissing-declarations -Wconversion -Wdouble-promotion -Wfloat-equal -Wmain -Wundef -Wstrict-prototypes -Wnested-externs -Wold-style-definition -Wbad-function-cast -Wno-unknown-pragmas -Wno-unused-function -fno-strict-aliasing
+C_FLAGS = -g -std=gnu90
 

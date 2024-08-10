@@ -21,10 +21,12 @@ struct ImClass {
   void (*dtor)(void *self);
   void (*clone)(void *self, void const *from);
   void (*assign)(void *self, void const *from);
-  int (*compare)(void const *a, void const *b);
   /***************************************************************************/
 
-  char *(*tostr)(register void const *const self);
+  int (*compare)(void const *a, void const *b);
+  char *(*tostr)(void const *self);
+
+  void (*implof)(void *interface);
 };
 
 #define CLASS(k)                                                               \
@@ -32,6 +34,7 @@ struct ImClass {
   static struct ImClass _##k = {__##k##_Init__,                                \
                                 "CLASS(" #k ")",                               \
                                 0u,                                            \
+                                NULL,                                          \
                                 NULL,                                          \
                                 NULL,                                          \
                                 NULL,                                          \

@@ -52,13 +52,6 @@ PUBLIC char *imtostr(register void const *const self) {
   }
 }
 
-PUBLIC int imputobj(register void const *const self, register FILE *const fp) {
-  register char *const str = imtostr(self);
-  register int const ret = fputs(str, fp);
-  imfree(str);
-  return ret;
-}
-
 PUBLIC int imcomp(register void const *const a, register void const *const b) {
   if (a == b) {
     return 0;

@@ -42,6 +42,7 @@ CMakeFiles/main.dir/src/main.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerror.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imio.h \
  /home/imkabir/c_programming/imlib/include/imlib/imlog.h \
  /home/imkabir/c_programming/imlib/include/imlib/immem.h \
  /home/imkabir/c_programming/imlib/include/imlib/imoption.h \
@@ -55,4 +56,5 @@ CMakeFiles/main.dir/src/main.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imresult.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerror.h \
  /home/imkabir/c_programming/imlib/include/imlib/immem.h \
- /home/imkabir/c_programming/imlib/include/imlib/imstr.h
+ /home/imkabir/c_programming/imlib/include/imlib/imstr.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imwrap.h

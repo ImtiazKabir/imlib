@@ -44,4 +44,5 @@ CMakeFiles/main.dir/src/imstr.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imclass_prot.h \
  /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
+ /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
  /home/imkabir/c_programming/imlib/include/imlib/imparam.h

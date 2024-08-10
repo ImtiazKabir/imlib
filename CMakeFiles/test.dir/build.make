@@ -83,10 +83,24 @@ CMakeFiles/test.dir/test/string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/test/string.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/test/string.c -o CMakeFiles/test.dir/test/string.c.s
 
+CMakeFiles/test.dir/src/imbox.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/imbox.c.o: src/imbox.c
+CMakeFiles/test.dir/src/imbox.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/src/imbox.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imbox.c.o -MF CMakeFiles/test.dir/src/imbox.c.o.d -o CMakeFiles/test.dir/src/imbox.c.o -c /home/imkabir/c_programming/imlib/src/imbox.c
+
+CMakeFiles/test.dir/src/imbox.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/src/imbox.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/imkabir/c_programming/imlib/src/imbox.c > CMakeFiles/test.dir/src/imbox.c.i
+
+CMakeFiles/test.dir/src/imbox.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/src/imbox.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/src/imbox.c -o CMakeFiles/test.dir/src/imbox.c.s
+
 CMakeFiles/test.dir/src/imclass.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/imclass.c.o: src/imclass.c
 CMakeFiles/test.dir/src/imclass.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/src/imclass.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test.dir/src/imclass.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imclass.c.o -MF CMakeFiles/test.dir/src/imclass.c.o.d -o CMakeFiles/test.dir/src/imclass.c.o -c /home/imkabir/c_programming/imlib/src/imclass.c
 
 CMakeFiles/test.dir/src/imclass.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/test.dir/src/imclass.c.s: cmake_force
 CMakeFiles/test.dir/src/imerrno.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/imerrno.c.o: src/imerrno.c
 CMakeFiles/test.dir/src/imerrno.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test.dir/src/imerrno.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test.dir/src/imerrno.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imerrno.c.o -MF CMakeFiles/test.dir/src/imerrno.c.o.d -o CMakeFiles/test.dir/src/imerrno.c.o -c /home/imkabir/c_programming/imlib/src/imerrno.c
 
 CMakeFiles/test.dir/src/imerrno.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/test.dir/src/imerrno.c.s: cmake_force
 CMakeFiles/test.dir/src/imerror.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/imerror.c.o: src/imerror.c
 CMakeFiles/test.dir/src/imerror.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test.dir/src/imerror.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test.dir/src/imerror.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imerror.c.o -MF CMakeFiles/test.dir/src/imerror.c.o.d -o CMakeFiles/test.dir/src/imerror.c.o -c /home/imkabir/c_programming/imlib/src/imerror.c
 
 CMakeFiles/test.dir/src/imerror.c.i: cmake_force
@@ -125,10 +139,24 @@ CMakeFiles/test.dir/src/imerror.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/src/imerror.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/src/imerror.c -o CMakeFiles/test.dir/src/imerror.c.s
 
+CMakeFiles/test.dir/src/imio.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/imio.c.o: src/imio.c
+CMakeFiles/test.dir/src/imio.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test.dir/src/imio.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imio.c.o -MF CMakeFiles/test.dir/src/imio.c.o.d -o CMakeFiles/test.dir/src/imio.c.o -c /home/imkabir/c_programming/imlib/src/imio.c
+
+CMakeFiles/test.dir/src/imio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/src/imio.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/imkabir/c_programming/imlib/src/imio.c > CMakeFiles/test.dir/src/imio.c.i
+
+CMakeFiles/test.dir/src/imio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/src/imio.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/src/imio.c -o CMakeFiles/test.dir/src/imio.c.s
+
 CMakeFiles/test.dir/src/imlog.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/imlog.c.o: src/imlog.c
 CMakeFiles/test.dir/src/imlog.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test.dir/src/imlog.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test.dir/src/imlog.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imlog.c.o -MF CMakeFiles/test.dir/src/imlog.c.o.d -o CMakeFiles/test.dir/src/imlog.c.o -c /home/imkabir/c_programming/imlib/src/imlog.c
 
 CMakeFiles/test.dir/src/imlog.c.i: cmake_force
@@ -142,7 +170,7 @@ CMakeFiles/test.dir/src/imlog.c.s: cmake_force
 CMakeFiles/test.dir/src/immem.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/immem.c.o: src/immem.c
 CMakeFiles/test.dir/src/immem.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test.dir/src/immem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test.dir/src/immem.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/immem.c.o -MF CMakeFiles/test.dir/src/immem.c.o.d -o CMakeFiles/test.dir/src/immem.c.o -c /home/imkabir/c_programming/imlib/src/immem.c
 
 CMakeFiles/test.dir/src/immem.c.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/test.dir/src/immem.c.s: cmake_force
 CMakeFiles/test.dir/src/impanic.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/impanic.c.o: src/impanic.c
 CMakeFiles/test.dir/src/impanic.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test.dir/src/impanic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test.dir/src/impanic.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/impanic.c.o -MF CMakeFiles/test.dir/src/impanic.c.o.d -o CMakeFiles/test.dir/src/impanic.c.o -c /home/imkabir/c_programming/imlib/src/impanic.c
 
 CMakeFiles/test.dir/src/impanic.c.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/test.dir/src/impanic.c.s: cmake_force
 CMakeFiles/test.dir/src/imparam.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/imparam.c.o: src/imparam.c
 CMakeFiles/test.dir/src/imparam.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test.dir/src/imparam.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test.dir/src/imparam.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imparam.c.o -MF CMakeFiles/test.dir/src/imparam.c.o.d -o CMakeFiles/test.dir/src/imparam.c.o -c /home/imkabir/c_programming/imlib/src/imparam.c
 
 CMakeFiles/test.dir/src/imparam.c.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/test.dir/src/imparam.c.s: cmake_force
 CMakeFiles/test.dir/src/imstr.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/imstr.c.o: src/imstr.c
 CMakeFiles/test.dir/src/imstr.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test.dir/src/imstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test.dir/src/imstr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imstr.c.o -MF CMakeFiles/test.dir/src/imstr.c.o.d -o CMakeFiles/test.dir/src/imstr.c.o -c /home/imkabir/c_programming/imlib/src/imstr.c
 
 CMakeFiles/test.dir/src/imstr.c.i: cmake_force
@@ -195,33 +223,69 @@ CMakeFiles/test.dir/src/imstr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/src/imstr.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/src/imstr.c -o CMakeFiles/test.dir/src/imstr.c.s
 
+CMakeFiles/test.dir/src/imwrap.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/imwrap.c.o: src/imwrap.c
+CMakeFiles/test.dir/src/imwrap.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/test.dir/src/imwrap.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/imwrap.c.o -MF CMakeFiles/test.dir/src/imwrap.c.o.d -o CMakeFiles/test.dir/src/imwrap.c.o -c /home/imkabir/c_programming/imlib/src/imwrap.c
+
+CMakeFiles/test.dir/src/imwrap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/src/imwrap.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/imkabir/c_programming/imlib/src/imwrap.c > CMakeFiles/test.dir/src/imwrap.c.i
+
+CMakeFiles/test.dir/src/imwrap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/src/imwrap.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/src/imwrap.c -o CMakeFiles/test.dir/src/imwrap.c.s
+
+CMakeFiles/test.dir/src/list.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/list.c.o: src/list.c
+CMakeFiles/test.dir/src/list.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/test.dir/src/list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/src/list.c.o -MF CMakeFiles/test.dir/src/list.c.o.d -o CMakeFiles/test.dir/src/list.c.o -c /home/imkabir/c_programming/imlib/src/list.c
+
+CMakeFiles/test.dir/src/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/src/list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/imkabir/c_programming/imlib/src/list.c > CMakeFiles/test.dir/src/list.c.i
+
+CMakeFiles/test.dir/src/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/src/list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/imkabir/c_programming/imlib/src/list.c -o CMakeFiles/test.dir/src/list.c.s
+
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/test/string.c.o" \
+"CMakeFiles/test.dir/src/imbox.c.o" \
 "CMakeFiles/test.dir/src/imclass.c.o" \
 "CMakeFiles/test.dir/src/imerrno.c.o" \
 "CMakeFiles/test.dir/src/imerror.c.o" \
+"CMakeFiles/test.dir/src/imio.c.o" \
 "CMakeFiles/test.dir/src/imlog.c.o" \
 "CMakeFiles/test.dir/src/immem.c.o" \
 "CMakeFiles/test.dir/src/impanic.c.o" \
 "CMakeFiles/test.dir/src/imparam.c.o" \
-"CMakeFiles/test.dir/src/imstr.c.o"
+"CMakeFiles/test.dir/src/imstr.c.o" \
+"CMakeFiles/test.dir/src/imwrap.c.o" \
+"CMakeFiles/test.dir/src/list.c.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test/test: CMakeFiles/test.dir/test/string.c.o
+test/test: CMakeFiles/test.dir/src/imbox.c.o
 test/test: CMakeFiles/test.dir/src/imclass.c.o
 test/test: CMakeFiles/test.dir/src/imerrno.c.o
 test/test: CMakeFiles/test.dir/src/imerror.c.o
+test/test: CMakeFiles/test.dir/src/imio.c.o
 test/test: CMakeFiles/test.dir/src/imlog.c.o
 test/test: CMakeFiles/test.dir/src/immem.c.o
 test/test: CMakeFiles/test.dir/src/impanic.c.o
 test/test: CMakeFiles/test.dir/src/imparam.c.o
 test/test: CMakeFiles/test.dir/src/imstr.c.o
+test/test: CMakeFiles/test.dir/src/imwrap.c.o
+test/test: CMakeFiles/test.dir/src/list.c.o
 test/test: CMakeFiles/test.dir/build.make
 test/test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable test/test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/imkabir/c_programming/imlib/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable test/test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
