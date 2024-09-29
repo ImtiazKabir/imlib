@@ -14,9 +14,9 @@ struct ImError {
 
 extern struct ImClass *const ImError;
 
-#define IM_DECLARE_ERROR(name)                                                 \
+#define IM_DECLARE_ERROR(name, parent)                                         \
   struct name {                                                                \
-    struct ImError err;                                                        \
+    struct parent err;                                                         \
   };                                                                           \
   extern struct ImClass *const name;
 
@@ -30,7 +30,13 @@ extern struct ImClass *const ImError;
   PRIVATE void __##name##_super_params__(                                      \
       register struct ImParams *const sup_args,                                \
       register struct ImParams *const self_args) {                             \
-    if (ImParams_Match(self_args, 1u, PARAM_PTR) != IM_FALSE) {                \
+    if (ImParams_Match(self_args, 2u, PARAM_INT, PARAM_PTR) != IM_FALSE) {     \
+      auto int arg_code = 0;                                                   \
+      auto char const *arg_desc = NULL;                                        \
+      ImParams_Extract(self_args, &arg_code, &arg_desc);                       \
+      (void)ImParams_Push(sup_args, 2u, PARAM_INT, arg_code, PARAM_PTR,        \
+                          arg_desc);                                           \
+    } else if (ImParams_Match(self_args, 1u, PARAM_PTR) != IM_FALSE) {         \
       auto char const *arg_desc = NULL;                                        \
       ImParams_Extract(self_args, &arg_desc);                                  \
       (void)ImParams_Push(sup_args, 2u, PARAM_INT, code, PARAM_PTR, arg_desc); \
@@ -49,5 +55,7 @@ extern struct ImClass *const ImError;
     _##name.ctor = __##name##_ctor__;                                          \
     _##name.dtor = __##name##_dtor__;                                          \
   }
+
+IM_DECLARE_ERROR(IndexOutOfBound, ImError)
 
 #endif /* !IMERROR_H_ */

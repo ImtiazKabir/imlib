@@ -21,7 +21,7 @@ PUBLIC void __init__(struct ImError *self, int code, char const *desc) {
 PUBLIC void __deinit__(struct ImError *self) {
   self->code = 0;
 
-  (void)imfree(self->desc);
+  free(self->desc);
   self->desc = NULL;
 }
 
@@ -51,3 +51,5 @@ CLASS(ImError) {
   _ImError.dtor = __destructor__;
   _ImError.tostr = __tostr__;
 }
+
+IM_DEFINE_ERROR(IndexOutOfBound, 34, "Index out of bound")

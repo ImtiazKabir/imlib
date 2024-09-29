@@ -31,12 +31,12 @@
   };                                                                           \
   struct tag RESULT_OK(tag)(type);                                             \
   struct tag RESULT_ERR(tag)(struct ImError * err);                            \
-  int RESULT_IS_OK(tag)(struct tag const *);                                   \
-  int RESULT_IS_ERR(tag)(struct tag const *);                                  \
-  type RESULT_UNWRAP(tag)(struct tag const *);                                 \
-  type RESULT_EXPECT(tag)(struct tag const *, char const *);                   \
-  type RESULT_UNWRAP_OR(tag)(struct tag const *, type);                        \
-  struct ImError *RESULT_UNWRAP_ERR(tag)(struct tag const *);
+  int RESULT_IS_OK(tag)(struct tag const);                                     \
+  int RESULT_IS_ERR(tag)(struct tag const);                                    \
+  type RESULT_UNWRAP(tag)(struct tag const);                                   \
+  type RESULT_EXPECT(tag)(struct tag const, char const *);                     \
+  type RESULT_UNWRAP_OR(tag)(struct tag const, type);                          \
+  struct ImError *RESULT_UNWRAP_ERR(tag)(struct tag const);
 
 #define IM_DEFINE_RESULT(tag, type)                                            \
   struct tag RESULT_OK(tag)(type value) {                                      \
@@ -49,31 +49,47 @@
     res.err = err;                                                             \
     return res;                                                                \
   }                                                                            \
-  int RESULT_IS_OK(tag)(struct tag const *res) { return res->err == NULL; }    \
-  int RESULT_IS_ERR(tag)(struct tag const *res) { return res->err != NULL; }   \
-  type RESULT_UNWRAP(tag)(struct tag const *res) {                             \
+  int RESULT_IS_OK(tag)(struct tag const res) { return res.err == NULL; }      \
+  int RESULT_IS_ERR(tag)(struct tag const res) { return res.err != NULL; }     \
+  type RESULT_UNWRAP(tag)(struct tag const res) {                              \
     if (RESULT_IS_ERR(tag)(res)) {                                             \
       impanic("Attempted to unwrap empty Result of type " #type                \
               ". Instead had error %s: %s\n",                                  \
-              imtype(res->err), res->err->desc);                               \
+              imtype(res.err), res.err->desc);                                 \
     }                                                                          \
-    return res->value;                                                         \
+    return res.value;                                                          \
   }                                                                            \
-  type RESULT_EXPECT(tag)(struct tag const *res, char const *message_on_err) { \
+  type RESULT_EXPECT(tag)(struct tag const res, char const *message_on_err) {  \
     if (RESULT_IS_ERR(tag)(res))                                               \
       impanic("%s\n", message_on_err);                                         \
-    return res->value;                                                         \
+    return res.value;                                                          \
   }                                                                            \
-  type RESULT_UNWRAP_OR(tag)(struct tag const *res, type else_val) {           \
+  type RESULT_UNWRAP_OR(tag)(struct tag const res, type else_val) {            \
     if (RESULT_IS_ERR(tag)(res)) {                                             \
+      (void)imdel(res.err);                                                    \
       return else_val;                                                         \
     }                                                                          \
-    return res->value;                                                         \
+    return res.value;                                                          \
   }                                                                            \
-  struct ImError *RESULT_UNWRAP_ERR(tag)(struct tag const *res) {              \
+  struct ImError *RESULT_UNWRAP_ERR(tag)(struct tag const res) {               \
     if (RESULT_IS_ERR(tag)(res)) {                                             \
       impanic("%s\n",                                                          \
               "Attempted to unwrap Ok Result of type " #type " for error.");   \
     }                                                                          \
-    return res->err;                                                           \
+    return res.err;                                                            \
   }
+
+#ifndef IMRESULT_H_
+#define IMRESULT_H_
+IM_DECLARE_RESULT(ImResInt, int)
+IM_DECLARE_RESULT(ImResShort, short)
+IM_DECLARE_RESULT(ImResLong, long)
+IM_DECLARE_RESULT(ImResFloat, float)
+IM_DECLARE_RESULT(ImResDouble, double)
+IM_DECLARE_RESULT(ImResChar, char)
+IM_DECLARE_RESULT(ImResUint, unsigned int)
+IM_DECLARE_RESULT(ImResUshort, unsigned short)
+IM_DECLARE_RESULT(ImResULong, unsigned long)
+IM_DECLARE_RESULT(ImResUChar, unsigned char)
+IM_DECLARE_RESULT(ImResPtr, void *)
+#endif /* ! IMRESULT_H_ */

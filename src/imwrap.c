@@ -14,7 +14,7 @@ PRIVATE char *__dupstr__(register char const *const src) {
 
 PRIVATE void __destructor__(register void *const self) { (void)self; }
 
-#define DEFINE_IM_WRAP(klass, type, param, fmt)                                \
+#define IM_DEFINE_WRAP(klass, type, param, fmt)                                \
   PUBLIC struct klass *klass##_Construct(register type const val) {            \
     return imnew(klass, 1u, param, val);                                       \
   }                                                                            \
@@ -67,13 +67,13 @@ PRIVATE void __destructor__(register void *const self) { (void)self; }
     _##klass.tostr = __##klass##_tostr__;                                      \
   }
 
-DEFINE_IM_WRAP(ImInt, int, PARAM_INT, "%d")
-DEFINE_IM_WRAP(ImShort, short, PARAM_SHORT, "%d")
-DEFINE_IM_WRAP(ImLong, long, PARAM_LONG, "%ld")
-DEFINE_IM_WRAP(ImFloat, float, PARAM_FLOAT, "%f")
-DEFINE_IM_WRAP(ImDouble, double, PARAM_DOUBLE, "%f")
-DEFINE_IM_WRAP(ImChar, char, PARAM_CHAR, "%c")
-DEFINE_IM_WRAP(ImUint, unsigned int, PARAM_UNSIGNED, "%u")
-DEFINE_IM_WRAP(ImUshort, unsigned short, PARAM_UNSIGNED_SHORT, "%u")
-DEFINE_IM_WRAP(ImULong, unsigned long, PARAM_UNSIGNED_LONG, "%lu")
-DEFINE_IM_WRAP(ImUChar, unsigned char, PARAM_UNSIGNED_CHAR, "%c")
+IM_DEFINE_WRAP(ImInt, int, PARAM_INT, "%d")
+IM_DEFINE_WRAP(ImShort, short, PARAM_SHORT, "%d")
+IM_DEFINE_WRAP(ImLong, long, PARAM_LONG, "%ld")
+IM_DEFINE_WRAP(ImFloat, float, PARAM_FLOAT, "%f")
+IM_DEFINE_WRAP(ImDouble, double, PARAM_DOUBLE, "%f")
+IM_DEFINE_WRAP(ImChar, char, PARAM_CHAR, "%c")
+IM_DEFINE_WRAP(ImUint, unsigned int, PARAM_UNSIGNED, "%u")
+IM_DEFINE_WRAP(ImUshort, unsigned short, PARAM_UNSIGNED_SHORT, "%u")
+IM_DEFINE_WRAP(ImULong, unsigned long, PARAM_UNSIGNED_LONG, "%lu")
+IM_DEFINE_WRAP(ImUChar, unsigned char, PARAM_UNSIGNED_CHAR, "%c")

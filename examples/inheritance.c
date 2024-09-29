@@ -93,7 +93,7 @@ CLASS(Child) {
   _Child.super_params = __child_super_params__;
 }
 
-IM_DECLARE_ERROR(TestError)
+IM_DECLARE_ERROR(TestError, ImError)
 IM_DEFINE_ERROR(TestError, 30, "Demo")
 
 PRIVATE void TestErrorDemo(void) {
@@ -186,10 +186,10 @@ IM_DEFINE_OPTION(OptionInteger, int)
 PRIVATE struct OptionInteger OptionTest(void) {
   struct OptionInt opt = OptionInt_Some(4);
   int x;
-  if (OptionInt_IsNone(&opt)) {
+  if (OptionInt_IsNone(opt)) {
     imlog(LOG_TRACE, "none");
   }
-  if (OptionInt_IsSome(&opt)) {
+  if (OptionInt_IsSome(opt)) {
     imlog(LOG_TRACE, "some");
   }
   OPTION_TRY(x, OptionInt, opt, OptionInteger);
@@ -203,7 +203,7 @@ PRIVATE struct ResultInt ResultDemo(void) {
   struct ImError *error = imnew(TestError, 0u);
   struct ResultInt res = ResultInt_Err(error);
   int x;
-  x = ResultInt_Unwrap(&res);
+  x = ResultInt_Unwrap(res);
   RESULT_TRY(x, ResultInt, res, ResultInt);
   imlog1(LOG_INFO, "%d", x);
   return res;

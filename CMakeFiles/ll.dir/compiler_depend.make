@@ -4,15 +4,25 @@
 CMakeFiles/ll.dir/examples/ll.c.o: examples/ll.c \
   include/imlib/imclass.h \
   include/imlib/imerrno.h \
+  include/imlib/imerror.h \
   include/imlib/imlog.h \
   include/imlib/immem.h \
+  include/imlib/imoption.h \
   include/imlib/impanic.h \
+  include/imlib/imparam.h \
+  include/imlib/imresult.h \
   include/imlib/imstdinc.h \
   include/imlib/imwrap.h \
   include/imlib/imclass.h \
+  include/imlib/imerror.h \
+  include/imlib/immem.h \
+  include/imlib/imoption.h \
+  include/imlib/impanic.h \
+  include/imlib/imresult.h \
   include/imlib/imstdinc.h \
+  include/imlib/list/iiter.h \
+  include/imlib/list/ilist.h \
   include/imlib/list/linkedlist.h \
-  include/imlib/list/list.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
@@ -26,6 +36,8 @@ CMakeFiles/ll.dir/examples/ll.c.o: examples/ll.c \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/select.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -53,6 +65,7 @@ CMakeFiles/ll.dir/examples/ll.c.o: examples/ll.c \
   /usr/include/bits/uintn-identity.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
@@ -60,30 +73,51 @@ CMakeFiles/ll.dir/examples/ll.c.o: examples/ll.c \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdbool.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h
 
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdbool.h:
 
 /usr/include/sys/types.h:
 
 /usr/include/sys/cdefs.h:
 
-include/imlib/imclass.h:
+/usr/include/stdint.h:
 
-/usr/include/bits/struct_mutex.h:
+/usr/include/gnu/stubs.h:
+
+/usr/include/features.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/bits/stdint-least.h:
+
+/usr/include/alloca.h:
+
+/usr/include/sys/select.h:
+
+include/imlib/list/linkedlist.h:
+
+/usr/include/gnu/stubs-64.h:
+
+include/imlib/immem.h:
 
 /usr/include/bits/select.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
-/usr/include/features-time64.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h:
 
 /usr/include/bits/long-double.h:
 
@@ -93,53 +127,73 @@ include/imlib/imclass.h:
 
 /usr/include/bits/floatn.h:
 
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/bits/floatn-common.h:
-
 /usr/include/bits/endianness.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
-include/imlib/imerrno.h:
-
-/usr/include/gnu/stubs-64.h:
-
-include/imlib/immem.h:
-
-/usr/include/sys/select.h:
-
-include/imlib/list/linkedlist.h:
-
-/usr/include/alloca.h:
-
-/usr/include/bits/time64.h:
 
 /usr/include/bits/byteswap.h:
 
-include/imlib/imstdinc.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/endian.h:
-
-include/imlib/imwrap.h:
-
-/usr/include/bits/thread-shared-types.h:
-
-/usr/include/bits/timesize.h:
-
-/usr/include/bits/endian.h:
+/usr/include/bits/time64.h:
 
 include/imlib/impanic.h:
 
 /usr/include/bits/types/__sigset_t.h:
 
 /usr/include/bits/waitflags.h:
+
+include/imlib/list/ilist.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/timesize.h:
+
+include/imlib/imoption.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+include/imlib/imclass.h:
+
+include/imlib/imerrno.h:
+
+include/imlib/imerror.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/stdlib.h:
+
+include/imlib/imlog.h:
+
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+include/imlib/list/iiter.h:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/bits/wchar.h:
+
+include/imlib/imwrap.h:
+
+include/imlib/imresult.h:
+
+include/imlib/imstdinc.h:
+
+/usr/include/stdio.h:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/bits/struct_mutex.h:
+
+/usr/include/bits/thread-shared-types.h:
 
 examples/ll.c:
 
@@ -155,19 +209,15 @@ examples/ll.c:
 
 /usr/include/bits/typesizes.h:
 
-/usr/include/bits/uintn-identity.h:
+include/imlib/imparam.h:
 
-include/imlib/list/list.h:
+/usr/include/bits/uintn-identity.h:
 
 /usr/include/bits/wordsize.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/bits/types/clock_t.h:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -183,16 +233,4 @@ include/imlib/list/list.h:
 
 /usr/include/bits/types/time_t.h:
 
-include/imlib/imlog.h:
-
-/usr/include/stdlib.h:
-
 /usr/include/bits/waitstatus.h:
-
-/usr/include/features.h:
-
-/usr/include/gnu/stubs.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/stdio.h:

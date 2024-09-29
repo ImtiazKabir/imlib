@@ -1,0 +1,26 @@
+#include "imlib/imoption.h"
+#include "imlib/imresult.h"
+
+IM_DEFINE_OPTION(ImOptInt, int)
+IM_DEFINE_OPTION(ImOptShort, short)
+IM_DEFINE_OPTION(ImOptLong, long)
+IM_DEFINE_OPTION(ImOptFloat, float)
+IM_DEFINE_OPTION(ImOptDouble, double)
+IM_DEFINE_OPTION(ImOptChar, char)
+IM_DEFINE_OPTION(ImOptUInt, unsigned int)
+IM_DEFINE_OPTION(ImOptUShort, unsigned short)
+IM_DEFINE_OPTION(ImOptULong, unsigned long)
+IM_DEFINE_OPTION(ImOptUChar, unsigned char)
+IM_DEFINE_OPTION(ImOptPtr, void *)
+
+IM_DEFINE_RESULT(ImResInt, int)
+IM_DEFINE_RESULT(ImResShort, short)
+IM_DEFINE_RESULT(ImResLong, long)
+IM_DEFINE_RESULT(ImResFloat, float)
+IM_DEFINE_RESULT(ImResDouble, double)
+IM_DEFINE_RESULT(ImResChar, char)
+IM_DEFINE_RESULT(ImResUint, unsigned int)
+IM_DEFINE_RESULT(ImResUshort, unsigned short)
+IM_DEFINE_RESULT(ImResULong, unsigned long)
+IM_DEFINE_RESULT(ImResUChar, unsigned char)
+IM_DEFINE_RESULT(ImResPtr, void *)
