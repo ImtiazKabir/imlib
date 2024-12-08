@@ -1,5 +1,7 @@
 /home/imkabir/c_programming/imlib/CMakeFiles/imlib.dir
+/home/imkabir/c_programming/imlib/CMakeFiles/factory.dir
 /home/imkabir/c_programming/imlib/CMakeFiles/inheritance.dir
 /home/imkabir/c_programming/imlib/CMakeFiles/ll.dir
+/home/imkabir/c_programming/imlib/CMakeFiles/examples.dir
 /home/imkabir/c_programming/imlib/CMakeFiles/edit_cache.dir
 /home/imkabir/c_programming/imlib/CMakeFiles/rebuild_cache.dir

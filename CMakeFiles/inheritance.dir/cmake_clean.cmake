@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/inheritance.dir/link.d"
   "CMakeFiles/inheritance.dir/examples/inheritance.c.o"
   "CMakeFiles/inheritance.dir/examples/inheritance.c.o.d"
   "examples/inheritance"

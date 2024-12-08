@@ -1,0 +1,1 @@
+/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment -Wl,--dependency-file,CMakeFiles/factory.dir/link.d CMakeFiles/factory.dir/examples/factory/main.c.o -o examples/factory/factory  lib/libimlib.a

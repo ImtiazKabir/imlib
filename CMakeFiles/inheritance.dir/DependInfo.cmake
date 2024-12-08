@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/imkabir/c_programming/imlib/examples/inheritance.c" "CMakeFiles/inheritance.dir/examples/inheritance.c.o" "gcc" "CMakeFiles/inheritance.dir/examples/inheritance.c.o.d"
+  "" "examples/inheritance" "gcc" "CMakeFiles/inheritance.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

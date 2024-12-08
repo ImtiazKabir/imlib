@@ -1,1 +1,1 @@
-/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment CMakeFiles/inheritance.dir/examples/inheritance.c.o -o examples/inheritance  lib/libimlib.a
+/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment -Wl,--dependency-file,CMakeFiles/inheritance.dir/link.d CMakeFiles/inheritance.dir/examples/inheritance.c.o -o examples/inheritance  lib/libimlib.a
