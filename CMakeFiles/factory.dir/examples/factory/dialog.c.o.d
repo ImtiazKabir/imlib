@@ -1,5 +1,5 @@
-CMakeFiles/factory.dir/examples/factory/main.c.o: \
- /home/imkabir/c_programming/imlib/examples/factory/main.c \
+CMakeFiles/factory.dir/examples/factory/dialog.c.o: \
+ /home/imkabir/c_programming/imlib/examples/factory/dialog.c \
  /usr/include/stdc-predef.h \
  /home/imkabir/c_programming/imlib/examples/factory/dialog.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
@@ -22,6 +22,6 @@ CMakeFiles/factory.dir/examples/factory/main.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
  /home/imkabir/c_programming/imlib/examples/factory/button.h \
- /home/imkabir/c_programming/imlib/examples/factory/webdialog.h \
- /home/imkabir/c_programming/imlib/examples/factory/windialog.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imclass_prot.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/impanic.h

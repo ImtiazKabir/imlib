@@ -181,6 +181,78 @@ examples/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/build
 .PHONY : examples/fast
 
+examples/factory/button.o: examples/factory/button.c.o
+.PHONY : examples/factory/button.o
+
+# target to build an object file
+examples/factory/button.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/button.c.o
+.PHONY : examples/factory/button.c.o
+
+examples/factory/button.i: examples/factory/button.c.i
+.PHONY : examples/factory/button.i
+
+# target to preprocess a source file
+examples/factory/button.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/button.c.i
+.PHONY : examples/factory/button.c.i
+
+examples/factory/button.s: examples/factory/button.c.s
+.PHONY : examples/factory/button.s
+
+# target to generate assembly for a file
+examples/factory/button.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/button.c.s
+.PHONY : examples/factory/button.c.s
+
+examples/factory/dialog.o: examples/factory/dialog.c.o
+.PHONY : examples/factory/dialog.o
+
+# target to build an object file
+examples/factory/dialog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/dialog.c.o
+.PHONY : examples/factory/dialog.c.o
+
+examples/factory/dialog.i: examples/factory/dialog.c.i
+.PHONY : examples/factory/dialog.i
+
+# target to preprocess a source file
+examples/factory/dialog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/dialog.c.i
+.PHONY : examples/factory/dialog.c.i
+
+examples/factory/dialog.s: examples/factory/dialog.c.s
+.PHONY : examples/factory/dialog.s
+
+# target to generate assembly for a file
+examples/factory/dialog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/dialog.c.s
+.PHONY : examples/factory/dialog.c.s
+
+examples/factory/htmlbutton.o: examples/factory/htmlbutton.c.o
+.PHONY : examples/factory/htmlbutton.o
+
+# target to build an object file
+examples/factory/htmlbutton.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/htmlbutton.c.o
+.PHONY : examples/factory/htmlbutton.c.o
+
+examples/factory/htmlbutton.i: examples/factory/htmlbutton.c.i
+.PHONY : examples/factory/htmlbutton.i
+
+# target to preprocess a source file
+examples/factory/htmlbutton.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/htmlbutton.c.i
+.PHONY : examples/factory/htmlbutton.c.i
+
+examples/factory/htmlbutton.s: examples/factory/htmlbutton.c.s
+.PHONY : examples/factory/htmlbutton.s
+
+# target to generate assembly for a file
+examples/factory/htmlbutton.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/htmlbutton.c.s
+.PHONY : examples/factory/htmlbutton.c.s
+
 examples/factory/main.o: examples/factory/main.c.o
 .PHONY : examples/factory/main.o
 
@@ -204,6 +276,78 @@ examples/factory/main.s: examples/factory/main.c.s
 examples/factory/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/main.c.s
 .PHONY : examples/factory/main.c.s
+
+examples/factory/webdialog.o: examples/factory/webdialog.c.o
+.PHONY : examples/factory/webdialog.o
+
+# target to build an object file
+examples/factory/webdialog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/webdialog.c.o
+.PHONY : examples/factory/webdialog.c.o
+
+examples/factory/webdialog.i: examples/factory/webdialog.c.i
+.PHONY : examples/factory/webdialog.i
+
+# target to preprocess a source file
+examples/factory/webdialog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/webdialog.c.i
+.PHONY : examples/factory/webdialog.c.i
+
+examples/factory/webdialog.s: examples/factory/webdialog.c.s
+.PHONY : examples/factory/webdialog.s
+
+# target to generate assembly for a file
+examples/factory/webdialog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/webdialog.c.s
+.PHONY : examples/factory/webdialog.c.s
+
+examples/factory/winbutton.o: examples/factory/winbutton.c.o
+.PHONY : examples/factory/winbutton.o
+
+# target to build an object file
+examples/factory/winbutton.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/winbutton.c.o
+.PHONY : examples/factory/winbutton.c.o
+
+examples/factory/winbutton.i: examples/factory/winbutton.c.i
+.PHONY : examples/factory/winbutton.i
+
+# target to preprocess a source file
+examples/factory/winbutton.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/winbutton.c.i
+.PHONY : examples/factory/winbutton.c.i
+
+examples/factory/winbutton.s: examples/factory/winbutton.c.s
+.PHONY : examples/factory/winbutton.s
+
+# target to generate assembly for a file
+examples/factory/winbutton.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/winbutton.c.s
+.PHONY : examples/factory/winbutton.c.s
+
+examples/factory/windialog.o: examples/factory/windialog.c.o
+.PHONY : examples/factory/windialog.o
+
+# target to build an object file
+examples/factory/windialog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/windialog.c.o
+.PHONY : examples/factory/windialog.c.o
+
+examples/factory/windialog.i: examples/factory/windialog.c.i
+.PHONY : examples/factory/windialog.i
+
+# target to preprocess a source file
+examples/factory/windialog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/windialog.c.i
+.PHONY : examples/factory/windialog.c.i
+
+examples/factory/windialog.s: examples/factory/windialog.c.s
+.PHONY : examples/factory/windialog.s
+
+# target to generate assembly for a file
+examples/factory/windialog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/windialog.c.s
+.PHONY : examples/factory/windialog.c.s
 
 examples/inheritance.o: examples/inheritance.c.o
 .PHONY : examples/inheritance.o
@@ -626,9 +770,27 @@ help:
 	@echo "... imlib"
 	@echo "... inheritance"
 	@echo "... ll"
+	@echo "... examples/factory/button.o"
+	@echo "... examples/factory/button.i"
+	@echo "... examples/factory/button.s"
+	@echo "... examples/factory/dialog.o"
+	@echo "... examples/factory/dialog.i"
+	@echo "... examples/factory/dialog.s"
+	@echo "... examples/factory/htmlbutton.o"
+	@echo "... examples/factory/htmlbutton.i"
+	@echo "... examples/factory/htmlbutton.s"
 	@echo "... examples/factory/main.o"
 	@echo "... examples/factory/main.i"
 	@echo "... examples/factory/main.s"
+	@echo "... examples/factory/webdialog.o"
+	@echo "... examples/factory/webdialog.i"
+	@echo "... examples/factory/webdialog.s"
+	@echo "... examples/factory/winbutton.o"
+	@echo "... examples/factory/winbutton.i"
+	@echo "... examples/factory/winbutton.s"
+	@echo "... examples/factory/windialog.o"
+	@echo "... examples/factory/windialog.i"
+	@echo "... examples/factory/windialog.s"
 	@echo "... examples/inheritance.o"
 	@echo "... examples/inheritance.i"
 	@echo "... examples/inheritance.s"

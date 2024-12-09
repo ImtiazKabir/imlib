@@ -201,6 +201,7 @@ CMakeFiles/imlib.dir/src/imclass.c.o: src/imclass.c \
   include/imlib/imerrno.h \
   include/imlib/immem.h \
   include/imlib/immem_prot.h \
+  include/imlib/impanic.h \
   include/imlib/imparam.h \
   include/imlib/imstdinc.h \
   /usr/include/alloca.h \

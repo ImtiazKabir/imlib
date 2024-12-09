@@ -1,7 +1,7 @@
-CMakeFiles/factory.dir/examples/factory/main.c.o: \
- /home/imkabir/c_programming/imlib/examples/factory/main.c \
+CMakeFiles/factory.dir/examples/factory/windialog.c.o: \
+ /home/imkabir/c_programming/imlib/examples/factory/windialog.c \
  /usr/include/stdc-predef.h \
- /home/imkabir/c_programming/imlib/examples/factory/dialog.h \
+ /home/imkabir/c_programming/imlib/examples/factory/windialog.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
@@ -21,7 +21,8 @@ CMakeFiles/factory.dir/examples/factory/main.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
+ /home/imkabir/c_programming/imlib/examples/factory/dialog.h \
  /home/imkabir/c_programming/imlib/examples/factory/button.h \
- /home/imkabir/c_programming/imlib/examples/factory/webdialog.h \
- /home/imkabir/c_programming/imlib/examples/factory/windialog.h \
- /home/imkabir/c_programming/imlib/include/imlib/impanic.h
+ /home/imkabir/c_programming/imlib/examples/factory/winbutton.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imclass_prot.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h

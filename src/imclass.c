@@ -10,6 +10,7 @@
 #include "imlib/imerrno.h"
 #include "imlib/immem.h"
 #include "imlib/immem_prot.h"
+#include "imlib/impanic.h"
 #include "imlib/imparam.h"
 #include "imlib/imstdinc.h"
 
