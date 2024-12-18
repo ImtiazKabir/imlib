@@ -51,5 +51,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/factory.dir/DependInfo.cmake"
   "CMakeFiles/inheritance.dir/DependInfo.cmake"
   "CMakeFiles/ll.dir/DependInfo.cmake"
+  "CMakeFiles/modlog.dir/DependInfo.cmake"
   "CMakeFiles/examples.dir/DependInfo.cmake"
   )

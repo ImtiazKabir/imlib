@@ -69,6 +69,7 @@ include CMakeFiles/examples.dir/progress.make
 CMakeFiles/examples: examples/factory/factory
 CMakeFiles/examples: examples/inheritance
 CMakeFiles/examples: examples/ll
+CMakeFiles/examples: examples/modlog
 
 CMakeFiles/examples.dir/codegen:
 .PHONY : CMakeFiles/examples.dir/codegen

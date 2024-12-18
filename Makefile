@@ -169,6 +169,19 @@ ll/fast:
 .PHONY : ll/fast
 
 #=============================================================================
+# Target rules for targets named modlog
+
+# Build rule for target.
+modlog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 modlog
+.PHONY : modlog
+
+# fast build rule for target.
+modlog/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modlog.dir/build.make CMakeFiles/modlog.dir/build
+.PHONY : modlog/fast
+
+#=============================================================================
 # Target rules for targets named examples
 
 # Build rule for target.
@@ -397,6 +410,30 @@ examples/ll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ll.dir/build.make CMakeFiles/ll.dir/examples/ll.c.s
 .PHONY : examples/ll.c.s
 
+examples/modlog.o: examples/modlog.c.o
+.PHONY : examples/modlog.o
+
+# target to build an object file
+examples/modlog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modlog.dir/build.make CMakeFiles/modlog.dir/examples/modlog.c.o
+.PHONY : examples/modlog.c.o
+
+examples/modlog.i: examples/modlog.c.i
+.PHONY : examples/modlog.i
+
+# target to preprocess a source file
+examples/modlog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modlog.dir/build.make CMakeFiles/modlog.dir/examples/modlog.c.i
+.PHONY : examples/modlog.c.i
+
+examples/modlog.s: examples/modlog.c.s
+.PHONY : examples/modlog.s
+
+# target to generate assembly for a file
+examples/modlog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modlog.dir/build.make CMakeFiles/modlog.dir/examples/modlog.c.s
+.PHONY : examples/modlog.c.s
+
 src/iiter.o: src/iiter.c.o
 .PHONY : src/iiter.o
 
@@ -613,6 +650,30 @@ src/immem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/immem.c.s
 .PHONY : src/immem.c.s
 
+src/imodlog.o: src/imodlog.c.o
+.PHONY : src/imodlog.o
+
+# target to build an object file
+src/imodlog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imodlog.c.o
+.PHONY : src/imodlog.c.o
+
+src/imodlog.i: src/imodlog.c.i
+.PHONY : src/imodlog.i
+
+# target to preprocess a source file
+src/imodlog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imodlog.c.i
+.PHONY : src/imodlog.c.i
+
+src/imodlog.s: src/imodlog.c.s
+.PHONY : src/imodlog.s
+
+# target to generate assembly for a file
+src/imodlog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imodlog.c.s
+.PHONY : src/imodlog.c.s
+
 src/imoptres.o: src/imoptres.c.o
 .PHONY : src/imoptres.o
 
@@ -770,6 +831,7 @@ help:
 	@echo "... imlib"
 	@echo "... inheritance"
 	@echo "... ll"
+	@echo "... modlog"
 	@echo "... examples/factory/button.o"
 	@echo "... examples/factory/button.i"
 	@echo "... examples/factory/button.s"
@@ -797,6 +859,9 @@ help:
 	@echo "... examples/ll.o"
 	@echo "... examples/ll.i"
 	@echo "... examples/ll.s"
+	@echo "... examples/modlog.o"
+	@echo "... examples/modlog.i"
+	@echo "... examples/modlog.s"
 	@echo "... src/iiter.o"
 	@echo "... src/iiter.i"
 	@echo "... src/iiter.s"
@@ -824,6 +889,9 @@ help:
 	@echo "... src/immem.o"
 	@echo "... src/immem.i"
 	@echo "... src/immem.s"
+	@echo "... src/imodlog.o"
+	@echo "... src/imodlog.i"
+	@echo "... src/imodlog.s"
 	@echo "... src/imoptres.o"
 	@echo "... src/imoptres.i"
 	@echo "... src/imoptres.s"
