@@ -36,6 +36,9 @@ CMakeFiles/imlib.dir/src/impanic.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/strings.h \
+ /usr/include/strings.h /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /home/imkabir/c_programming/imlib/include/imlib/imlog.h \
- /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imerrno.h

@@ -5,13 +5,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 #include "imlib/imlog.h"
 #include "imlib/imstdinc.h"
+#include "imlib/imerrno.h"
 
-char const *trace_target = "notarget";
 
-PUBLIC void imtrace(void) {
+char const *trace_target = "notarget"; PUBLIC void imtrace(void) {
   enum { MAX_STACK_FRAMES = 64 };
   void *stack_traces[MAX_STACK_FRAMES];
   int i, trace_size = 0;
@@ -36,15 +37,24 @@ PUBLIC void imtrace(void) {
 
 PUBLIC void impanic(char const *const fmt, ...) {
   auto va_list args = {0};
+  register unsigned char const msk = imloggetmsk();
 
-  imlogf(LOG_FATAL, stderr, "Program panicked with the following message");
+  imlogsetmin(LOG_TRACE);
+
+  imlogf(LOG_FATAL, stderr, "Program panicked");
+  perror("errno");
+  imperror("imerrno");
+  fprintf(stderr, "Panic message: ");
 
   va_start(args, fmt);
   (void)vfprintf(stderr, fmt, args);
   va_end(args);
 
+  fprintf(stderr, "\n");
+
   imlogf(LOG_TRACE, stderr, "");
   imtrace();
 
+  imlogsetmsk(msk);
   exit(EXIT_FAILURE);
 }

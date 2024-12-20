@@ -737,14 +737,19 @@ CMakeFiles/imlib.dir/src/imoptres.c.o
 
 CMakeFiles/imlib.dir/src/impanic.c.o
  /home/imkabir/c_programming/imlib/src/impanic.c
+ /home/imkabir/c_programming/imlib/include/imlib/imerrno.h
  /home/imkabir/c_programming/imlib/include/imlib/imlog.h
  /home/imkabir/c_programming/imlib/include/imlib/impanic.h
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/errno-base.h
+ /usr/include/asm-generic/errno.h
+ /usr/include/asm/errno.h
  /usr/include/bits/atomic_wide_counter.h
  /usr/include/bits/byteswap.h
  /usr/include/bits/endian.h
  /usr/include/bits/endianness.h
+ /usr/include/bits/errno.h
  /usr/include/bits/floatn-common.h
  /usr/include/bits/floatn.h
  /usr/include/bits/libc-header-start.h
@@ -784,11 +789,13 @@ CMakeFiles/imlib.dir/src/impanic.c.o
  /usr/include/bits/waitstatus.h
  /usr/include/bits/wordsize.h
  /usr/include/endian.h
+ /usr/include/errno.h
  /usr/include/execinfo.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/gnu/stubs-64.h
  /usr/include/gnu/stubs.h
+ /usr/include/linux/errno.h
  /usr/include/stdc-predef.h
  /usr/include/stdio.h
  /usr/include/stdlib.h

@@ -3,6 +3,16 @@
 
 #include "imstdinc.h"
 
+#define EQ(stmt,val)                                 \
+  if ((stmt) != (val)) {                             \
+    impanic("Assertion error: " #stmt " != " #val);  \
+  }
+
+#define NEQ(stmt,val)                                 \
+  if ((stmt) == (val)) {                             \
+    impanic("Assertion error: " #stmt " == " #val);  \
+  }
+
 extern char const *trace_target;
 
 PUBLIC void imtrace(void);

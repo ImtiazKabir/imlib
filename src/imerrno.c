@@ -87,7 +87,7 @@ PUBLIC void imclrerr(void) {
   }
 }
 
-PUBLIC void imperrror(char const *str) {
+PUBLIC void imperror(char const *str) {
   char *msg = pthread_getspecific(errmsg_key);
   if ((msg != NULL) && (*msg != '\0')) {
     imlogf2(LOG_ERROR, stderr, "%s: %s\n", str, msg);

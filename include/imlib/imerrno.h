@@ -11,6 +11,6 @@ PUBLIC void imerr(int errcode, char const *errmsg);
 PUBLIC int imerrno(void);
 PUBLIC char const *imerrmsg(void);
 PUBLIC void imclrerr(void);
-PUBLIC void imperrror(char const *str);
+PUBLIC void imperror(char const *str);
 
 #endif /* IMERRNO_H_ */
