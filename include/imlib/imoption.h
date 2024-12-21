@@ -69,6 +69,7 @@
 
 #ifndef IMOPTION_H_
 #define IMOPTION_H_
+IM_DECLARE_OPTION(ImOptVoid, int)
 IM_DECLARE_OPTION(ImOptInt, int)
 IM_DECLARE_OPTION(ImOptShort, short)
 IM_DECLARE_OPTION(ImOptLong, long)

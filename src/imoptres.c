@@ -1,6 +1,7 @@
 #include "imlib/imoption.h"
 #include "imlib/imresult.h"
 
+IM_DEFINE_OPTION(ImOptVoid, int)
 IM_DEFINE_OPTION(ImOptInt, int)
 IM_DEFINE_OPTION(ImOptShort, short)
 IM_DEFINE_OPTION(ImOptLong, long)
@@ -13,6 +14,7 @@ IM_DEFINE_OPTION(ImOptULong, unsigned long)
 IM_DEFINE_OPTION(ImOptUChar, unsigned char)
 IM_DEFINE_OPTION(ImOptPtr, void *)
 
+IM_DEFINE_RESULT(ImResVoid, int)
 IM_DEFINE_RESULT(ImResInt, int)
 IM_DEFINE_RESULT(ImResShort, short)
 IM_DEFINE_RESULT(ImResLong, long)

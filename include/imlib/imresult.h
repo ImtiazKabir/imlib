@@ -81,6 +81,7 @@
 
 #ifndef IMRESULT_H_
 #define IMRESULT_H_
+IM_DECLARE_RESULT(ImResVoid, int)
 IM_DECLARE_RESULT(ImResInt, int)
 IM_DECLARE_RESULT(ImResShort, short)
 IM_DECLARE_RESULT(ImResLong, long)
