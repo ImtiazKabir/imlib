@@ -379,7 +379,7 @@ PRIVATE void __ImLLIter_Destructor__(register void *const self) { (void)self; }
 PRIVATE struct ImOptPtr __ImLLIter_Next__(register void *const _self) {
   register struct ImLLIter *const self = _self;
   register struct ImOptPtr ret = ImOptPtr_None();
-  if (self->node == NULL) {
+  if (*self->node == NULL) {
     return ImOptPtr_None();
   }
 
