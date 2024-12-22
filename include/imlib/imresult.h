@@ -6,15 +6,6 @@
 #include "impanic.h"
 #include "imstdinc.h"
 
-#define RESULT_TRY(dest, tag, res, ret)                                        \
-  do {                                                                         \
-    struct tag _result_##tag##_try_at_##__LINE__ = res;                        \
-    if (_result_##tag##_try_at_##__LINE__.err) {                               \
-      return REINTERPRET_CAST(struct ret, _result_##tag##_try_at_##__LINE__;)  \
-    }                                                                          \
-    dest = _result_##tag##_try_at_##__LINE__.value;                            \
-  } while (0)
-
 #define RESULT_OK(tag) tag##_Ok
 #define RESULT_ERR(tag) tag##_Err
 #define RESULT_IS_OK(tag) tag##_IsOk
@@ -23,6 +14,24 @@
 #define RESULT_EXPECT(tag) tag##_Expect
 #define RESULT_UNWRAP_OR(tag) tag##_UnwrapOr
 #define RESULT_UNWRAP_ERR(tag) tag##_UnwrapErr
+
+#define RESULT_TRY(tag, res, ret)                                              \
+  do {                                                                         \
+    struct tag _result_##tag##_try_at_##__LINE__ = res;                        \
+    if (_result_##tag##_try_at_##__LINE__.err) {                               \
+      return RESULT_ERR(ret)(_result_##tag##_try_at_##__LINE__.err);           \
+    }                                                                          \
+  } while (0)
+
+#define RESULT_TRY_OR(dest, tag, res, ret)                                     \
+  do {                                                                         \
+    struct tag _result_##tag##_try_at_##__LINE__ = res;                        \
+    if (_result_##tag##_try_at_##__LINE__.err) {                               \
+      return RESULT_ERR(ret)(_result_##tag##_try_at_##__LINE__.err);           \
+    }                                                                          \
+    dest = _result_##tag##_try_at_##__LINE__.value;                            \
+  } while (0)
+
 
 #define IM_DECLARE_RESULT(tag, type)                                           \
   struct tag {                                                                 \

@@ -204,7 +204,7 @@ PRIVATE struct ResultInt ResultDemo(void) {
   struct ResultInt res = ResultInt_Err(error);
   int x;
   x = ResultInt_Unwrap(res);
-  RESULT_TRY(x, ResultInt, res, ResultInt);
+  RESULT_TRY_OR(x, ResultInt, res, ResultInt);
   imlog1(LOG_INFO, "%d", x);
   return res;
 }
