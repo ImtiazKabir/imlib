@@ -6,8 +6,6 @@
 #include "../imresult.h"
 #include "../imstdinc.h"
 
-enum DataPolicy { POLICY_CLONE, POLICY_TRANSFER, POLICY_BORROW };
-
 struct ImIList {
   size_t (*len)(void *list);
   struct ImResPtr (*get)(void *list, size_t index);

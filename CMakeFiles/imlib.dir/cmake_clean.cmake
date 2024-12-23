@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/imlib.dir/src/imodlog.c.o.d"
   "CMakeFiles/imlib.dir/src/imoptres.c.o"
   "CMakeFiles/imlib.dir/src/imoptres.c.o.d"
+  "CMakeFiles/imlib.dir/src/impair.c.o"
+  "CMakeFiles/imlib.dir/src/impair.c.o.d"
   "CMakeFiles/imlib.dir/src/impanic.c.o"
   "CMakeFiles/imlib.dir/src/impanic.c.o.d"
   "CMakeFiles/imlib.dir/src/imparam.c.o"

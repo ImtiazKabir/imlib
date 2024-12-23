@@ -1,4 +1,4 @@
-#include "imlib/list/iiter.h"
+#include "imlib/iiter.h"
 
 #include "imlib/imclass.h"
 #include "imlib/imclass_prot.h"

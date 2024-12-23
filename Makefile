@@ -735,6 +735,30 @@ src/imoptres.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imoptres.c.s
 .PHONY : src/imoptres.c.s
 
+src/impair.o: src/impair.c.o
+.PHONY : src/impair.o
+
+# target to build an object file
+src/impair.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/impair.c.o
+.PHONY : src/impair.c.o
+
+src/impair.i: src/impair.c.i
+.PHONY : src/impair.i
+
+# target to preprocess a source file
+src/impair.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/impair.c.i
+.PHONY : src/impair.c.i
+
+src/impair.s: src/impair.c.s
+.PHONY : src/impair.s
+
+# target to generate assembly for a file
+src/impair.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/impair.c.s
+.PHONY : src/impair.c.s
+
 src/impanic.o: src/impanic.c.o
 .PHONY : src/impanic.o
 
@@ -936,6 +960,9 @@ help:
 	@echo "... src/imoptres.o"
 	@echo "... src/imoptres.i"
 	@echo "... src/imoptres.s"
+	@echo "... src/impair.o"
+	@echo "... src/impair.i"
+	@echo "... src/impair.s"
 	@echo "... src/impanic.o"
 	@echo "... src/impanic.i"
 	@echo "... src/impanic.s"

@@ -1,9 +1,9 @@
 #ifndef IMLIB_I_ITER_H_
 #define IMLIB_I_ITER_H_
 
-#include "../imclass.h"
-#include "../imoption.h"
-#include "../imstdinc.h"
+#include "imclass.h"
+#include "imoption.h"
+#include "imstdinc.h"
 
 struct ImIIter {
   struct ImOptPtr (*next)(void *iter);

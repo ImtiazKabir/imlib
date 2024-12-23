@@ -11,7 +11,7 @@
 #include "imlib/imparam.h"
 #include "imlib/imstdinc.h"
 #include "imlib/imstr.h"
-#include "imlib/list/iiter.h"
+#include "imlib/iiter.h"
 #include "imlib/list/ilist.h"
 
 struct LLNode {

@@ -24,4 +24,7 @@ typedef enum { IM_FALSE, IM_TRUE } ImBool;
       B                                                                        \
   }
 
+enum DataPolicy { POLICY_CLONE, POLICY_TRANSFER, POLICY_BORROW };
+
+
 #endif /* !IMSTDINC_H_ */

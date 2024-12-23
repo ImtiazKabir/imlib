@@ -8,7 +8,7 @@
 #include "imlib/imresult.h"
 #include "imlib/imstdinc.h"
 #include "imlib/imwrap.h"
-#include "imlib/list/iiter.h"
+#include "imlib/iiter.h"
 #include "imlib/list/ilist.h"
 
 PRIVATE void Summation(register void *const num, register void *const sum) {
