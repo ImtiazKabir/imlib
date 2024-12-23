@@ -1,0 +1,1 @@
+/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment -Wl,--dependency-file=CMakeFiles/hash.dir/link.d CMakeFiles/hash.dir/examples/hash.c.o -o examples/hash  lib/libimlib.a

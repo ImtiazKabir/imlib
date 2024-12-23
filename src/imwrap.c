@@ -49,6 +49,12 @@ PRIVATE void __destructor__(register void *const self) { (void)self; }
       return -1;                                                               \
     }                                                                          \
   }                                                                            \
+                                                                               \
+  PRIVATE size_t __##klass##_hash__(register void const *const _self) {        \
+    register struct klass const *const self = _self;                           \
+    return (size_t)(self->val);                                                \
+  }                                                                            \
+                                                                               \
   PRIVATE char *__##klass##_tostr__(register void const *const _self) {        \
     register struct klass const *const self = _self;                           \
     auto char buf[16u] = {0};                                                  \
@@ -64,6 +70,7 @@ PRIVATE void __destructor__(register void *const self) { (void)self; }
     _##klass.clone = __##klass##_clone_assign__;                               \
     _##klass.assign = __##klass##_clone_assign__;                              \
     _##klass.compare = __##klass##_compare__;                                  \
+    _##klass.hash = __##klass##_hash__;                                        \
     _##klass.tostr = __##klass##_tostr__;                                      \
   }
 

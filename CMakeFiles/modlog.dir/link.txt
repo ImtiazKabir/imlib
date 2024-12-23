@@ -1,1 +1,1 @@
-/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment -Wl,--dependency-file,CMakeFiles/modlog.dir/link.d CMakeFiles/modlog.dir/examples/modlog.c.o -o examples/modlog  lib/libimlib.a
+/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment -Wl,--dependency-file=CMakeFiles/modlog.dir/link.d CMakeFiles/modlog.dir/examples/modlog.c.o -o examples/modlog  lib/libimlib.a

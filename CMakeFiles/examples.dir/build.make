@@ -67,6 +67,7 @@ include CMakeFiles/examples.dir/compiler_depend.make
 include CMakeFiles/examples.dir/progress.make
 
 CMakeFiles/examples: examples/factory/factory
+CMakeFiles/examples: examples/hash
 CMakeFiles/examples: examples/inheritance
 CMakeFiles/examples: examples/ll
 CMakeFiles/examples: examples/modlog

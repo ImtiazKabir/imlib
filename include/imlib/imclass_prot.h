@@ -23,6 +23,7 @@ struct ImClass {
   void (*assign)(void *self, void const *from);
   /***************************************************************************/
 
+  size_t (*hash)(void const *self);
   int (*compare)(void const *a, void const *b);
   char *(*tostr)(void const *self);
 
@@ -34,6 +35,7 @@ struct ImClass {
   static struct ImClass _##k = {__##k##_Init__,                                \
                                 "CLASS(" #k ")",                               \
                                 0u,                                            \
+                                NULL,                                          \
                                 NULL,                                          \
                                 NULL,                                          \
                                 NULL,                                          \

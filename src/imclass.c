@@ -53,6 +53,15 @@ PUBLIC char *imtostr(register void const *const self) {
   }
 }
 
+PUBLIC size_t imhash(register void const *const self) {
+  register struct ImClass const *const klass = imclass(self);
+  if (klass->hash != NULL) {
+    return klass->hash(self);
+  } else {
+    return 0;
+  }
+}
+
 PUBLIC int imcomp(register void const *const a, register void const *const b) {
   if (a == b) {
     return 0;

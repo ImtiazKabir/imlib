@@ -143,6 +143,19 @@ factory/fast:
 .PHONY : factory/fast
 
 #=============================================================================
+# Target rules for targets named hash
+
+# Build rule for target.
+hash: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hash
+.PHONY : hash
+
+# fast build rule for target.
+hash/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hash.dir/build.make CMakeFiles/hash.dir/build
+.PHONY : hash/fast
+
+#=============================================================================
 # Target rules for targets named inheritance
 
 # Build rule for target.
@@ -361,6 +374,30 @@ examples/factory/windialog.s: examples/factory/windialog.c.s
 examples/factory/windialog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/examples/factory/windialog.c.s
 .PHONY : examples/factory/windialog.c.s
+
+examples/hash.o: examples/hash.c.o
+.PHONY : examples/hash.o
+
+# target to build an object file
+examples/hash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hash.dir/build.make CMakeFiles/hash.dir/examples/hash.c.o
+.PHONY : examples/hash.c.o
+
+examples/hash.i: examples/hash.c.i
+.PHONY : examples/hash.i
+
+# target to preprocess a source file
+examples/hash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hash.dir/build.make CMakeFiles/hash.dir/examples/hash.c.i
+.PHONY : examples/hash.c.i
+
+examples/hash.s: examples/hash.c.s
+.PHONY : examples/hash.s
+
+# target to generate assembly for a file
+examples/hash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hash.dir/build.make CMakeFiles/hash.dir/examples/hash.c.s
+.PHONY : examples/hash.c.s
 
 examples/inheritance.o: examples/inheritance.c.o
 .PHONY : examples/inheritance.o
@@ -828,6 +865,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... examples"
 	@echo "... factory"
+	@echo "... hash"
 	@echo "... imlib"
 	@echo "... inheritance"
 	@echo "... ll"
@@ -853,6 +891,9 @@ help:
 	@echo "... examples/factory/windialog.o"
 	@echo "... examples/factory/windialog.i"
 	@echo "... examples/factory/windialog.s"
+	@echo "... examples/hash.o"
+	@echo "... examples/hash.i"
+	@echo "... examples/hash.s"
 	@echo "... examples/inheritance.o"
 	@echo "... examples/inheritance.i"
 	@echo "... examples/inheritance.s"

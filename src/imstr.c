@@ -78,6 +78,18 @@ PRIVATE int __compare__(register void const *const _a,
   return strcmp(a->str, b->str);
 }
 
+PRIVATE size_t __hash__(register void const *const _self) {
+  register struct ImStr const *const self = _self;
+  register size_t hash = 0u;
+
+  hash = 7u;
+  FOR(size_t i, i = 0u; i < self->length; i += 1u, {
+    hash = hash * 31u + self->str[i];
+  });
+
+  return hash;
+}
+
 PRIVATE char *__dupstr__(register char const *const src) {
   return strcpy(imalloct("String", (strlen(src) + 1u) * sizeof(char)), src);
 }
@@ -207,5 +219,6 @@ CLASS(ImStr) {
   _ImStr.clone = __clone__;
   _ImStr.assign = __assign__;
   _ImStr.compare = __compare__;
+  _ImStr.hash = __hash__;
   _ImStr.tostr = __tostr__;
 }
