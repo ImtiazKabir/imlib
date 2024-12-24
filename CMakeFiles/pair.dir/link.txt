@@ -1,0 +1,1 @@
+/usr/bin/cc -g -fsanitize=address,undefined,leak,null,alignment -Wl,--dependency-file=CMakeFiles/pair.dir/link.d CMakeFiles/pair.dir/examples/pair.c.o -o examples/pair  lib/libimlib.a

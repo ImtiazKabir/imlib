@@ -71,6 +71,7 @@ CMakeFiles/examples: examples/hash
 CMakeFiles/examples: examples/inheritance
 CMakeFiles/examples: examples/ll
 CMakeFiles/examples: examples/modlog
+CMakeFiles/examples: examples/pair
 
 CMakeFiles/examples.dir/codegen:
 .PHONY : CMakeFiles/examples.dir/codegen

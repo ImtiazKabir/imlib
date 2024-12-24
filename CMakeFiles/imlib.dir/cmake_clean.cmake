@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/imlib.dir/src/chainmap.c.o"
+  "CMakeFiles/imlib.dir/src/chainmap.c.o.d"
   "CMakeFiles/imlib.dir/src/iiter.c.o"
   "CMakeFiles/imlib.dir/src/iiter.c.o.d"
   "CMakeFiles/imlib.dir/src/ilist.c.o"
   "CMakeFiles/imlib.dir/src/ilist.c.o.d"
+  "CMakeFiles/imlib.dir/src/imap.c.o"
+  "CMakeFiles/imlib.dir/src/imap.c.o.d"
   "CMakeFiles/imlib.dir/src/imbox.c.o"
   "CMakeFiles/imlib.dir/src/imbox.c.o.d"
   "CMakeFiles/imlib.dir/src/imclass.c.o"

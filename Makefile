@@ -195,6 +195,19 @@ modlog/fast:
 .PHONY : modlog/fast
 
 #=============================================================================
+# Target rules for targets named pair
+
+# Build rule for target.
+pair: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pair
+.PHONY : pair
+
+# fast build rule for target.
+pair/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pair.dir/build.make CMakeFiles/pair.dir/build
+.PHONY : pair/fast
+
+#=============================================================================
 # Target rules for targets named examples
 
 # Build rule for target.
@@ -471,6 +484,54 @@ examples/modlog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modlog.dir/build.make CMakeFiles/modlog.dir/examples/modlog.c.s
 .PHONY : examples/modlog.c.s
 
+examples/pair.o: examples/pair.c.o
+.PHONY : examples/pair.o
+
+# target to build an object file
+examples/pair.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pair.dir/build.make CMakeFiles/pair.dir/examples/pair.c.o
+.PHONY : examples/pair.c.o
+
+examples/pair.i: examples/pair.c.i
+.PHONY : examples/pair.i
+
+# target to preprocess a source file
+examples/pair.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pair.dir/build.make CMakeFiles/pair.dir/examples/pair.c.i
+.PHONY : examples/pair.c.i
+
+examples/pair.s: examples/pair.c.s
+.PHONY : examples/pair.s
+
+# target to generate assembly for a file
+examples/pair.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pair.dir/build.make CMakeFiles/pair.dir/examples/pair.c.s
+.PHONY : examples/pair.c.s
+
+src/chainmap.o: src/chainmap.c.o
+.PHONY : src/chainmap.o
+
+# target to build an object file
+src/chainmap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/chainmap.c.o
+.PHONY : src/chainmap.c.o
+
+src/chainmap.i: src/chainmap.c.i
+.PHONY : src/chainmap.i
+
+# target to preprocess a source file
+src/chainmap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/chainmap.c.i
+.PHONY : src/chainmap.c.i
+
+src/chainmap.s: src/chainmap.c.s
+.PHONY : src/chainmap.s
+
+# target to generate assembly for a file
+src/chainmap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/chainmap.c.s
+.PHONY : src/chainmap.c.s
+
 src/iiter.o: src/iiter.c.o
 .PHONY : src/iiter.o
 
@@ -518,6 +579,30 @@ src/ilist.s: src/ilist.c.s
 src/ilist.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/ilist.c.s
 .PHONY : src/ilist.c.s
+
+src/imap.o: src/imap.c.o
+.PHONY : src/imap.o
+
+# target to build an object file
+src/imap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imap.c.o
+.PHONY : src/imap.c.o
+
+src/imap.i: src/imap.c.i
+.PHONY : src/imap.i
+
+# target to preprocess a source file
+src/imap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imap.c.i
+.PHONY : src/imap.c.i
+
+src/imap.s: src/imap.c.s
+.PHONY : src/imap.s
+
+# target to generate assembly for a file
+src/imap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imlib.dir/build.make CMakeFiles/imlib.dir/src/imap.c.s
+.PHONY : src/imap.c.s
 
 src/imbox.o: src/imbox.c.o
 .PHONY : src/imbox.o
@@ -894,6 +979,7 @@ help:
 	@echo "... inheritance"
 	@echo "... ll"
 	@echo "... modlog"
+	@echo "... pair"
 	@echo "... examples/factory/button.o"
 	@echo "... examples/factory/button.i"
 	@echo "... examples/factory/button.s"
@@ -927,12 +1013,21 @@ help:
 	@echo "... examples/modlog.o"
 	@echo "... examples/modlog.i"
 	@echo "... examples/modlog.s"
+	@echo "... examples/pair.o"
+	@echo "... examples/pair.i"
+	@echo "... examples/pair.s"
+	@echo "... src/chainmap.o"
+	@echo "... src/chainmap.i"
+	@echo "... src/chainmap.s"
 	@echo "... src/iiter.o"
 	@echo "... src/iiter.i"
 	@echo "... src/iiter.s"
 	@echo "... src/ilist.o"
 	@echo "... src/ilist.i"
 	@echo "... src/ilist.s"
+	@echo "... src/imap.o"
+	@echo "... src/imap.i"
+	@echo "... src/imap.s"
 	@echo "... src/imbox.o"
 	@echo "... src/imbox.i"
 	@echo "... src/imbox.s"

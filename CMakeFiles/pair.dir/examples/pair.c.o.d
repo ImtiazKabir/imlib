@@ -1,5 +1,5 @@
-CMakeFiles/hash.dir/examples/hash.c.o: \
- /home/imkabir/c_programming/imlib/examples/hash.c \
+CMakeFiles/pair.dir/examples/pair.c.o: \
+ /home/imkabir/c_programming/imlib/examples/pair.c \
  /usr/include/stdc-predef.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
@@ -39,27 +39,11 @@ CMakeFiles/hash.dir/examples/hash.c.o: \
  /usr/include/bits/stdlib-float.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
- /home/imkabir/c_programming/imlib/include/imlib/imoption.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/wchar.h \
- /usr/include/bits/stdint-uintn.h /usr/include/bits/stdint-least.h \
+ /home/imkabir/c_programming/imlib/include/imlib/impair.h \
  /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
- /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstr.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/chainmap.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/imap.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imclass.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imerror.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imclass.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imparam.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imstdinc.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imoption.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../impanic.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imresult.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imerror.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../immem.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imstdinc.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imwrap.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h
