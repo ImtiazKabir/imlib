@@ -76,14 +76,14 @@ PRIVATE void __SetValPolicy__(register void *const _self,
 
 PRIVATE struct ImLinkedList *
 __GetChainFromKey__(register struct ImChainMap const *const self,
-                    register void *const key) {
+                    register void const *const key) {
   register size_t const hash = imhash(key);
   register size_t const index = hash % self->num_chain;
   return self->chains[index];
 }
 
 PRIVATE struct ImOptPtr __GetPair__(register struct ImChainMap *const self,
-                                    register void *const key) {
+                                    register void const *const key) {
   register struct ImOptPtr opt = ImOptPtr_None();
   register struct ImLinkedList *const chain = __GetChainFromKey__(self, key);
   register struct ImLLIter *const iter = imnew(ImLLIter, 1u, PARAM_PTR, chain);
@@ -108,7 +108,7 @@ PRIVATE struct ImOptPtr __GetPair__(register struct ImChainMap *const self,
 }
 
 PRIVATE struct ImOptPtr __Get__(register void *const _self,
-                                register void *const key) {
+                                register void const *const key) {
   register struct ImChainMap *const self = _self;
   register struct ImOptPtr opt = ImOptPtr_None();
 
@@ -124,14 +124,14 @@ PRIVATE struct ImOptPtr __Get__(register void *const _self,
 }
 
 PRIVATE void __AddOrReplace__(register void *const _self,
-                              register void *const key,
+                              register void const *const key,
                               register void *const val) {
   register struct ImChainMap *const self = _self;
   register struct ImOptPtr const opt = __GetPair__(self, key);
 
   if (ImOptPtr_IsSome(opt) != IM_FALSE) {
     register struct ImPair *const pair = ImOptPtr_Unwrap(opt);
-    ImPair_SetKeyWithPolicy(pair, key, self->key_policy);
+    ImPair_SetKeyWithPolicy(pair, (void *)key, self->key_policy);
     ImPair_SetValueWithPolicy(pair, val, self->val_policy);
   } else {
     register struct ImLinkedList *const chain = __GetChainFromKey__(self, key);
@@ -144,7 +144,7 @@ PRIVATE void __AddOrReplace__(register void *const _self,
 }
 
 PRIVATE void __RemoveIfExists__(register void *const _self,
-                                register void *const key) {
+                                register void const *const key) {
   register struct ImChainMap *const self = _self;
   register struct ImOptPtr const opt = __GetPair__(self, key);
 

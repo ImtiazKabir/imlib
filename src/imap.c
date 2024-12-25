@@ -24,7 +24,7 @@ PUBLIC size_t ImIMap_Len(register void *const map) {
   return len;
 }
 
-PUBLIC struct ImOptPtr ImIMap_Get(void *map, void *key) {
+PUBLIC struct ImOptPtr ImIMap_Get(register void *const map, register void const *const key) {
   register struct ImIMap *self = imnew(ImIMap, 0u);
   register struct ImClass *klass = imclass(map);
   register struct ImOptPtr ret = {0};
@@ -34,7 +34,7 @@ PUBLIC struct ImOptPtr ImIMap_Get(void *map, void *key) {
   return ret;
 }
 
-PUBLIC void ImIMap_SetKeyPolicy(void *map, enum DataPolicy policy) {
+PUBLIC void ImIMap_SetKeyPolicy(register void *const map, register enum DataPolicy const policy) {
   register struct ImIMap *self = imnew(ImIMap, 0u);
   register struct ImClass *klass = imclass(map);
   klass->implof(self);
@@ -42,7 +42,7 @@ PUBLIC void ImIMap_SetKeyPolicy(void *map, enum DataPolicy policy) {
   (void)imdel(self);
 }
 
-PUBLIC void ImIMap_SetValPolicy(void *map, enum DataPolicy policy) {
+PUBLIC void ImIMap_SetValPolicy(register void *const map, register enum DataPolicy const policy) {
   register struct ImIMap *self = imnew(ImIMap, 0u);
   register struct ImClass *klass = imclass(map);
   klass->implof(self);
@@ -50,7 +50,7 @@ PUBLIC void ImIMap_SetValPolicy(void *map, enum DataPolicy policy) {
   (void)imdel(self);
 }
 
-PUBLIC void ImIMap_AddOrReplace(void *map, void *key, void *value) {
+PUBLIC void ImIMap_AddOrReplace(register void *const map, register void const *const key, register void *const value) {
   register struct ImIMap *self = imnew(ImIMap, 0u);
   register struct ImClass *klass = imclass(map);
   klass->implof(self);
@@ -58,7 +58,7 @@ PUBLIC void ImIMap_AddOrReplace(void *map, void *key, void *value) {
   (void)imdel(self);
 }
 
-PUBLIC void ImIMap_RemoveIfExists(void *map, void *key) {
+PUBLIC void ImIMap_RemoveIfExists(register void *const map, register void const *const key) {
   register struct ImIMap *self = imnew(ImIMap, 0u);
   register struct ImClass *klass = imclass(map);
   klass->implof(self);

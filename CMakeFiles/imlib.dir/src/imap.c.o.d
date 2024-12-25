@@ -20,9 +20,6 @@ CMakeFiles/imlib.dir/src/imap.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imstdinc.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imerror.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imclass.h \
- /home/imkabir/c_programming/imlib/include/imlib/map/../imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imoption.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
@@ -32,6 +29,8 @@ CMakeFiles/imlib.dir/src/imap.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/map/../impanic.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imresult.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imerror.h \
+ /home/imkabir/c_programming/imlib/include/imlib/map/../imclass.h \
+ /home/imkabir/c_programming/imlib/include/imlib/map/../imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../immem.h \
  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
  /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
