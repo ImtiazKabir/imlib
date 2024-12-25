@@ -405,7 +405,6 @@ PRIVATE void __ImLLIter_Implementation__(register void *const interface) {
   if (imisof(interface, ImIIter) != IM_FALSE) {
     register struct ImIIter *const iter_interface = interface;
     iter_interface->next = __ImLLIter_Next__;
-    iter_interface->foreach = __ImLLIter_ForEach__;
   } else {
     impanic("ImLLIter does not implement %s\n", imtype(interface));
   }

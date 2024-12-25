@@ -159,11 +159,15 @@ PRIVATE int __call_dtor__(register void *const self,
 }
 
 PUBLIC int imdel(register void *const self) {
-  register struct ImClass *const klass = imclass(self);
-  if (__call_dtor__(self, klass) != IM_OK) {
-    return imerrno();
+  if (self == NULL) {
+    return IM_OK;
+  } else {
+    register struct ImClass *const klass = imclass(self);
+    if (__call_dtor__(self, klass) != IM_OK) {
+      return imerrno();
+    }
+    return imfree(self);
   }
-  return imfree(self);
 }
 
 PRIVATE int __call_clone__(register void const *const self,

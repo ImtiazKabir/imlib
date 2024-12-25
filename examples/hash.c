@@ -7,6 +7,7 @@
 #include "imlib/imstr.h"
 #include "imlib/map/chainmap.h"
 #include "imlib/map/imap.h"
+#include "imlib/iiter.h"
 
 #include <errno.h>
 #include <stdlib.h>
@@ -29,6 +30,7 @@ PRIVATE void Start(void) {
   ImStr_Append(v2, "C");
   ImIMap_AddOrReplace(map, k2, v2);
 
+  /*
   {
     register struct ImStr *const k = imnew(ImStr, 0u);
     register struct ImStr *v = NULL;
@@ -37,6 +39,19 @@ PRIVATE void Start(void) {
     v = ImOptPtr_Unwrap(ImIMap_Get(map, k2));
     imlog1(LOG_INFO, "%obj", v);
     (void)imdel(k);
+  }
+  */
+
+  {
+    register void *const iter = imnew(ImCMIter, 1u, PARAM_PTR, map);
+    while (IM_TRUE) {
+      register struct ImOptPtr nxt = ImIIter_Next(iter);
+      if (ImOptPtr_IsNone(nxt)) {
+        break;
+      }
+      imlog1(LOG_DEBUG, "%obj", ImOptPtr_Unwrap(nxt));
+    }
+    (void)imdel(iter);
   }
 
   (void)imdel(map);

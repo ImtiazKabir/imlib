@@ -7,7 +7,6 @@
 
 struct ImIIter {
   struct ImOptPtr (*next)(void *iter);
-  void (*foreach)(void *list, void (*func)(void *, void *), void *ret);
 };
 
 extern struct ImClass *const ImIIter;

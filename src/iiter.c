@@ -25,11 +25,13 @@ PUBLIC struct ImOptPtr ImIIter_Next(register void *const iter) {
 PUBLIC void ImIIter_ForEach(register void *const list,
                             register void (*func)(void *, void *),
                             register void *const ret) {
-  register struct ImIIter *self = imnew(ImIIter, 0u);
-  register struct ImClass *klass = imclass(list);
-  klass->implof(self);
-  self->foreach (list, func, ret);
-  (void)imdel(self);
+  while (IM_TRUE) {
+    register struct ImOptPtr nxt = ImIIter_Next(list);
+    if (ImOptPtr_IsNone(nxt)) {
+      break;
+    }
+    func(ImOptPtr_Unwrap(nxt), ret);
+  }
 }
 
 CLASS(ImIIter) {

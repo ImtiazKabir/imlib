@@ -12,6 +12,7 @@
 #include "imlib/imstdinc.h"
 #include "imlib/list/ilist.h"
 #include "imlib/list/linkedlist.h"
+#include "imlib/iiter.h"
 
 #include <stdlib.h>
 
@@ -177,3 +178,65 @@ CLASS(ImChainMap) {
   _ImChainMap.dtor = __Destructor__;
   _ImChainMap.implof = __InterfaceImplementation__;
 }
+
+struct ImCMIter {
+  struct ImChainMap *map;
+  size_t chain_index;
+  struct ImLLIter *iter;
+};
+
+PRIVATE void __ImCMIter_Constructor__(register void *const _self,
+                                      register struct ImParams *const args) {
+  register struct ImCMIter *const self = _self;
+  auto struct ImChainMap *map = NULL;
+  if (ImParams_Match(args, 1u, PARAM_PTR) == IM_FALSE) {
+    impanic("%s\n", "ImLLIter ctor takes (void *) as paramter");
+  }
+  ImParams_Extract(args, &map);
+
+  self->map = map;
+  self->chain_index = 0;
+  self->iter = NULL;
+}
+
+PRIVATE void __ImCMIter_Destructor__(register void *const _self) {
+  register struct ImCMIter *const self = _self;
+  (void)imdel(self->iter);
+}
+
+PRIVATE struct ImOptPtr __ImCMIter_Next__(register void *const _self) {
+  register struct ImCMIter *const self = _self;
+  register struct ImOptPtr nxt = ImOptPtr_None();
+
+  while (self->chain_index < self->map->num_chain) {
+    if (self->iter == NULL) {
+      self->iter = imnew(ImLLIter, 1u, PARAM_PTR, self->map->chains[self->chain_index]);
+    }
+    nxt = ImIIter_Next(self->iter);
+    if (ImOptPtr_IsSome(nxt) != IM_FALSE) {
+      break;
+    }
+    self->chain_index += 1u;
+    (void)imdel(self->iter);
+    self->iter = NULL;
+  }
+
+  return nxt;
+}
+
+PRIVATE void __ImCMIter_Implementation__(register void *const interface) {
+  if (imisof(interface, ImIIter) != IM_FALSE) {
+    register struct ImIIter *const iter_interface = interface;
+    iter_interface->next = __ImCMIter_Next__;
+  } else {
+    impanic("ImLLIter does not implement %s\n", imtype(interface));
+  }
+}
+
+CLASS(ImCMIter) {
+  _ImCMIter.size = sizeof(struct ImCMIter);
+  _ImCMIter.ctor = __ImCMIter_Constructor__;
+  _ImCMIter.dtor = __ImCMIter_Destructor__;
+  _ImCMIter.implof = __ImCMIter_Implementation__;
+}
+

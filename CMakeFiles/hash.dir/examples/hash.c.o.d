@@ -48,6 +48,7 @@ CMakeFiles/hash.dir/examples/hash.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
  /home/imkabir/c_programming/imlib/include/imlib/imstr.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/chainmap.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/imap.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imclass.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imerror.h \
@@ -60,6 +61,8 @@ CMakeFiles/hash.dir/examples/hash.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imerror.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../immem.h \
  /home/imkabir/c_programming/imlib/include/imlib/map/../imstdinc.h \
+ /home/imkabir/c_programming/imlib/include/imlib/iiter.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imoption.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h

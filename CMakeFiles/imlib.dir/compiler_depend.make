@@ -5,6 +5,7 @@ CMakeFiles/imlib.dir/src/chainmap.c.o: src/chainmap.c \
   include/imlib/iiter.h \
   include/imlib/imclass.h \
   include/imlib/imclass_prot.h \
+  include/imlib/imerrno.h \
   include/imlib/immem.h \
   include/imlib/imoption.h \
   include/imlib/impair.h \
@@ -1350,13 +1351,13 @@ include/imlib/immem_prot.h:
 
 src/impanic.c:
 
-include/imlib/list/ilist.h:
-
-src/chainmap.c:
-
 /usr/include/execinfo.h:
 
 include/imlib/iiter.h:
+
+include/imlib/imerrno.h:
+
+include/imlib/impair.h:
 
 /usr/include/bits/types/clockid_t.h:
 
@@ -1365,6 +1366,10 @@ include/imlib/iiter.h:
 /usr/include/errno.h:
 
 include/imlib/imoption.h:
+
+src/chainmap.c:
+
+include/imlib/list/ilist.h:
 
 /usr/include/bits/stdint-least.h:
 
@@ -1393,10 +1398,6 @@ src/imio.c:
 /usr/include/bits/posix2_lim.h:
 
 include/imlib/impanic.h:
-
-include/imlib/impair.h:
-
-include/imlib/imerrno.h:
 
 /usr/include/bits/stdlib-float.h:
 
