@@ -388,19 +388,6 @@ PRIVATE struct ImOptPtr __ImLLIter_Next__(register void *const _self) {
   return ret;
 }
 
-PRIVATE void __ImLLIter_ForEach__(register void *const _self,
-                                  register void (*func)(void *, void *),
-                                  register void *const ret) {
-  register struct ImLLIter *const self = _self;
-  register struct LLNode *node = NULL;
-
-  node = *self->node;
-  while (node != NULL) {
-    func(node->data, ret);
-    node = node->next;
-  }
-}
-
 PRIVATE void __ImLLIter_Implementation__(register void *const interface) {
   if (imisof(interface, ImIIter) != IM_FALSE) {
     register struct ImIIter *const iter_interface = interface;
