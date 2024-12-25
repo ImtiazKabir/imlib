@@ -22,11 +22,11 @@ PUBLIC struct ImOptPtr ImIIter_Next(register void *const iter) {
   return ret;
 }
 
-PUBLIC void ImIIter_ForEach(register void *const list,
+PUBLIC void ImIIter_ForEach(register void *const iter,
                             register void (*func)(void *, void *),
                             register void *const ret) {
   while (IM_TRUE) {
-    register struct ImOptPtr nxt = ImIIter_Next(list);
+    register struct ImOptPtr nxt = ImIIter_Next(iter);
     if (ImOptPtr_IsNone(nxt)) {
       break;
     }

@@ -8,9 +8,22 @@
 #include "imlib/map/chainmap.h"
 #include "imlib/map/imap.h"
 #include "imlib/iiter.h"
+#include "imlib/impair.h"
 
 #include <errno.h>
 #include <stdlib.h>
+
+PRIVATE void Append(register void *const _pair, register void *const _str) {
+  register struct ImPair *const pair = _pair;
+  register struct ImStr *const str = _str;
+  register struct ImStr *const key = ImPair_KeyView(pair);
+  register struct ImStr *const val = ImPair_ValueView(pair);
+  
+  ImStr_Append(str, ImStr_View(key));
+  ImStr_Append(str, ": ");
+  ImStr_Append(str, ImStr_View(val));
+  ImStr_Append(str, "\r\n");
+}
 
 PRIVATE void Start(void) {
   register struct ImChainMap *const map = imnew(ImChainMap, 0u);
@@ -43,15 +56,12 @@ PRIVATE void Start(void) {
   */
 
   {
-    register void *const iter = imnew(ImCMIter, 1u, PARAM_PTR, map);
-    while (IM_TRUE) {
-      register struct ImOptPtr nxt = ImIIter_Next(iter);
-      if (ImOptPtr_IsNone(nxt)) {
-        break;
-      }
-      imlog1(LOG_DEBUG, "%obj", ImOptPtr_Unwrap(nxt));
-    }
+    register struct ImStr *const sb = imnew(ImStr, 0u);
+    register struct ImCMIter *const iter = imnew(ImCMIter, 1u, PARAM_PTR, map);
+    ImIIter_ForEach(iter, Append, sb);
+    imlog1(LOG_INFO, "\n%obj", sb);
     (void)imdel(iter);
+    (void)imdel(sb);
   }
 
   (void)imdel(map);

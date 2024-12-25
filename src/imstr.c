@@ -39,11 +39,18 @@ PRIVATE void __deinit__(struct ImStr *self) {
 
 PRIVATE void __constructor__(register void *const self,
                              register struct ImParams *args) {
-  if (ImParams_Match(args, 0u) == IM_FALSE) {
-    impanic("%s\n", "ImStr constructor does not take any parameter");
+  if (ImParams_Match(args, 1u, PARAM_PTR) != IM_FALSE) {
+    auto char const *cstr = NULL;
+    ImParams_Extract(args, &cstr);
+    __init__(self);
+    ImStr_Append(self, cstr);
+  } else if (ImParams_Match(args, 0u) != IM_FALSE) {
+    __init__(self);
+  }
+  else {
+    impanic("%s\n", "ImStr constructor takes (void) or (char const *)");
   }
 
-  __init__(self);
 }
 
 PRIVATE void __destructor__(register void *const self) { __deinit__(self); }
