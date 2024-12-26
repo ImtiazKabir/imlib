@@ -7,11 +7,14 @@
 
 struct ImIIter {
   struct ImOptPtr (*next)(void *iter);
+  void (*reset)(void *iter);
 };
 
 extern struct ImClass *const ImIIter;
 
 PUBLIC struct ImOptPtr ImIIter_Next(void *iter);
+PUBLIC void ImIIter_Reset(void *iter);
+
 PUBLIC void ImIIter_ForEach(void *iter, void (*func)(void *, void *),
                             void *ret);
 

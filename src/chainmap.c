@@ -224,10 +224,18 @@ PRIVATE struct ImOptPtr __ImCMIter_Next__(register void *const _self) {
   return nxt;
 }
 
+PRIVATE void __ImCMIter_Reset__(register void *const _self) {
+  register struct ImCMIter *const self = _self;
+  self->chain_index = 0;
+  (void)imdel(self->iter);
+  self->iter = NULL;
+}
+
 PRIVATE void __ImCMIter_Implementation__(register void *const interface) {
   if (imisof(interface, ImIIter) != IM_FALSE) {
     register struct ImIIter *const iter_interface = interface;
     iter_interface->next = __ImCMIter_Next__;
+    iter_interface->reset = __ImCMIter_Reset__;
   } else {
     impanic("ImLLIter does not implement %s\n", imtype(interface));
   }

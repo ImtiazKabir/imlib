@@ -22,6 +22,14 @@ PUBLIC struct ImOptPtr ImIIter_Next(register void *const iter) {
   return ret;
 }
 
+PUBLIC void ImIIter_Reset(register void *const iter) {
+  register struct ImIIter *self = imnew(ImIIter, 0u);
+  register struct ImClass *klass = imclass(iter);
+  klass->implof(self);
+  self->reset(iter);
+  (void)imdel(self);
+}
+
 PUBLIC void ImIIter_ForEach(register void *const iter,
                             register void (*func)(void *, void *),
                             register void *const ret) {

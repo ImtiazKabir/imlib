@@ -361,6 +361,7 @@ CLASS(ImLinkedList) {
 
 struct ImLLIter {
   struct LLNode **node;
+  struct ImLinkedList *list;
 };
 
 PRIVATE void __ImLLIter_Constructor__(register void *const _self,
@@ -372,6 +373,7 @@ PRIVATE void __ImLLIter_Constructor__(register void *const _self,
   }
   ImParams_Extract(args, &list);
   self->node = &list->head;
+  self->list = list;
 }
 
 PRIVATE void __ImLLIter_Destructor__(register void *const self) { (void)self; }
@@ -388,10 +390,16 @@ PRIVATE struct ImOptPtr __ImLLIter_Next__(register void *const _self) {
   return ret;
 }
 
+PRIVATE void __ImLLIter_Reset__(register void *const _self) {
+  register struct ImLLIter *const self = _self;
+  self->node = &self->list->head;
+}
+
 PRIVATE void __ImLLIter_Implementation__(register void *const interface) {
   if (imisof(interface, ImIIter) != IM_FALSE) {
     register struct ImIIter *const iter_interface = interface;
     iter_interface->next = __ImLLIter_Next__;
+    iter_interface->reset = __ImLLIter_Reset__;
   } else {
     impanic("ImLLIter does not implement %s\n", imtype(interface));
   }
