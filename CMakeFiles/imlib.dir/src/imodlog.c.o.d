@@ -32,4 +32,6 @@ CMakeFiles/imlib.dir/src/imodlog.c.o: \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h \
- /home/imkabir/c_programming/imlib/include/imlib/ansi.h
+ /home/imkabir/c_programming/imlib/include/imlib/ansi.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imio.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h

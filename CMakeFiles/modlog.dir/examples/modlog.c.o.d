@@ -32,4 +32,10 @@ CMakeFiles/modlog.dir/examples/modlog.c.o: \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
- /usr/include/bits/stdio_lim.h
+ /usr/include/bits/stdio_lim.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imstr.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h

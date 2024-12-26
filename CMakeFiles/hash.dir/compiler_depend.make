@@ -8,6 +8,7 @@ CMakeFiles/hash.dir/examples/hash.c.o: examples/hash.c \
   include/imlib/imlog.h \
   include/imlib/immem.h \
   include/imlib/imoption.h \
+  include/imlib/impair.h \
   include/imlib/impanic.h \
   include/imlib/imstdinc.h \
   include/imlib/imstr.h \
@@ -168,6 +169,8 @@ include/imlib/immem.h:
 
 /usr/include/bits/stdint-least.h:
 
+include/imlib/imresult.h:
+
 include/imlib/imoption.h:
 
 /usr/include/errno.h:
@@ -176,21 +179,19 @@ include/imlib/imoption.h:
 
 /usr/include/bits/types/clockid_t.h:
 
+include/imlib/impair.h:
+
+include/imlib/imerrno.h:
+
 include/imlib/iiter.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h:
 
 examples/hash.c:
 
-/usr/include/stdc-predef.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h:
 
 include/imlib/imclass.h:
-
-include/imlib/imerrno.h:
 
 /usr/include/stdlib.h:
 
@@ -222,7 +223,9 @@ include/imlib/imstr.h:
 
 include/imlib/imparam.h:
 
-include/imlib/imresult.h:
+/usr/include/stdc-predef.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
 
 /usr/include/bits/pthreadtypes.h:
 

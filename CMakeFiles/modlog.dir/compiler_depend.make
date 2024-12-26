@@ -3,7 +3,12 @@
 
 CMakeFiles/modlog.dir/examples/modlog.c.o: examples/modlog.c \
   include/imlib/ansi.h \
+  include/imlib/imclass.h \
+  include/imlib/imerrno.h \
   include/imlib/imodlog.h \
+  include/imlib/imparam.h \
+  include/imlib/imstdinc.h \
+  include/imlib/imstr.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
@@ -75,9 +80,11 @@ examples/modlog: /usr/lib/libm.so.6 \
 
 /usr/lib/libc.so:
 
-/usr/include/bits/types/FILE.h:
+/usr/lib/libstdc++.so.6:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h:
+
+/usr/include/sys/types.h:
 
 /usr/include/bits/types.h:
 
@@ -91,35 +98,51 @@ examples/modlog: /usr/lib/libm.so.6 \
 
 include/imlib/ansi.h:
 
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/features-time64.h:
-
 /usr/include/bits/stdint-intn.h:
 
-examples/modlog.c:
+/usr/include/bits/long-double.h:
 
-/usr/include/bits/types/__fpos_t.h:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/bits/types/__mbstate_t.h:
+/usr/include/bits/libc-header-start.h:
 
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/floatn.h:
 
+include/imlib/imclass.h:
+
+examples/modlog.c:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+include/imlib/imerrno.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h:
+
+/usr/include/bits/struct_mutex.h:
+
 /usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/features-time64.h:
 
 include/imlib/imodlog.h:
 
-/usr/include/bits/libc-header-start.h:
+include/imlib/imstdinc.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/bits/floatn-common.h:
+
+include/imlib/imstr.h:
 
 /usr/include/alloca.h:
 
@@ -133,25 +156,29 @@ include/imlib/imodlog.h:
 
 /usr/include/bits/endianness.h:
 
-/usr/include/bits/types/__FILE.h:
+/usr/include/bits/types/FILE.h:
 
 /usr/include/bits/stdlib-float.h:
 
-/usr/include/bits/types/sigset_t.h:
+/usr/include/bits/types/__FILE.h:
 
-/usr/include/bits/floatn-common.h:
+/usr/include/bits/types/__fpos_t.h:
 
-/usr/include/bits/long-double.h:
+include/imlib/imparam.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/bits/types/clockid_t.h:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/include/bits/typesizes.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -171,14 +198,6 @@ include/imlib/imodlog.h:
 
 /usr/include/stdlib.h:
 
-/usr/include/bits/struct_mutex.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/endian.h:
-
 /usr/include/bits/waitstatus.h:
 
 /usr/include/features.h:
@@ -188,7 +207,3 @@ include/imlib/imodlog.h:
 /usr/include/bits/types/timer_t.h:
 
 /usr/include/stdio.h:
-
-/usr/include/sys/types.h:
-
-/usr/lib/libstdc++.so.6:

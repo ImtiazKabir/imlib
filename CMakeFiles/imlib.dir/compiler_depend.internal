@@ -596,6 +596,7 @@ CMakeFiles/imlib.dir/src/imio.c.o
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h
  /home/imkabir/c_programming/imlib/include/imlib/imio.h
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h
  /home/imkabir/c_programming/imlib/include/imlib/immem.h
  /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h
  /usr/include/alloca.h
@@ -776,7 +777,9 @@ CMakeFiles/imlib.dir/src/immem.c.o
 CMakeFiles/imlib.dir/src/imodlog.c.o
  /home/imkabir/c_programming/imlib/src/imodlog.c
  /home/imkabir/c_programming/imlib/include/imlib/ansi.h
+ /home/imkabir/c_programming/imlib/include/imlib/imio.h
  /home/imkabir/c_programming/imlib/include/imlib/imodlog.h
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h
  /usr/include/alloca.h
  /usr/include/bits/atomic_wide_counter.h
  /usr/include/bits/byteswap.h
@@ -1055,6 +1058,8 @@ CMakeFiles/imlib.dir/src/imstr.c.o
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h
  /home/imkabir/c_programming/imlib/include/imlib/imclass_prot.h
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h
+ /home/imkabir/c_programming/imlib/include/imlib/imio.h
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h
  /home/imkabir/c_programming/imlib/include/imlib/immem.h
  /home/imkabir/c_programming/imlib/include/imlib/impanic.h
  /home/imkabir/c_programming/imlib/include/imlib/imparam.h

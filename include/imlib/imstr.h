@@ -19,6 +19,7 @@ PUBLIC void ImStr_Append(struct ImStr *self, char const *cstr);
 PUBLIC void ImStr_AppendChar(struct ImStr *self, char c);
 PUBLIC void ImStr_AppendInt(struct ImStr *self, int i);
 PUBLIC void ImStr_AppendReal(struct ImStr *self, double d);
+PUBLIC void ImStr_AppendObj(struct ImStr *const self, void *obj);
 PUBLIC void ImStr_VAppendFmt(struct ImStr *self, char const *fmt, va_list args);
 PUBLIC void ImStr_AppendFmt(struct ImStr *self, char const *fmt, ...);
 PUBLIC int ImStr_InsertAt(struct ImStr *self, size_t index, const char *cstr);

@@ -587,6 +587,7 @@ CMakeFiles/imlib.dir/src/imio.c.o: src/imio.c \
   include/imlib/imclass.h \
   include/imlib/imerrno.h \
   include/imlib/imio.h \
+  include/imlib/imlog.h \
   include/imlib/immem.h \
   include/imlib/imstdinc.h \
   /usr/include/alloca.h \
@@ -764,7 +765,9 @@ CMakeFiles/imlib.dir/src/immem.c.o: src/immem.c \
 
 CMakeFiles/imlib.dir/src/imodlog.c.o: src/imodlog.c \
   include/imlib/ansi.h \
+  include/imlib/imio.h \
   include/imlib/imodlog.h \
+  include/imlib/imstdinc.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
@@ -1038,6 +1041,8 @@ CMakeFiles/imlib.dir/src/imstr.c.o: src/imstr.c \
   include/imlib/imclass.h \
   include/imlib/imclass_prot.h \
   include/imlib/imerrno.h \
+  include/imlib/imio.h \
+  include/imlib/imlog.h \
   include/imlib/immem.h \
   include/imlib/impanic.h \
   include/imlib/imparam.h \

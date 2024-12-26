@@ -23,6 +23,7 @@ CMakeFiles/imlib.dir/src/imstr.c.o: \
  /usr/include/memory.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h \
  /home/imkabir/c_programming/imlib/include/imlib/immem.h \
  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
  /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
@@ -45,4 +46,5 @@ CMakeFiles/imlib.dir/src/imstr.c.o: \
  /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
  /home/imkabir/c_programming/imlib/include/imlib/impanic.h \
- /home/imkabir/c_programming/imlib/include/imlib/imparam.h
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imio.h

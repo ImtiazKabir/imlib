@@ -38,4 +38,5 @@ CMakeFiles/imlib.dir/src/imio.c.o: \
  /usr/include/bits/stdlib-float.h \
  /home/imkabir/c_programming/imlib/include/imlib/imclass.h \
  /home/imkabir/c_programming/imlib/include/imlib/imerrno.h \
- /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h \
+ /home/imkabir/c_programming/imlib/include/imlib/imlog.h

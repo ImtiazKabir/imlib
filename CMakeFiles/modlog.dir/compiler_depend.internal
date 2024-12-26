@@ -4,7 +4,12 @@
 CMakeFiles/modlog.dir/examples/modlog.c.o
  /home/imkabir/c_programming/imlib/examples/modlog.c
  /home/imkabir/c_programming/imlib/include/imlib/ansi.h
+ /home/imkabir/c_programming/imlib/include/imlib/imclass.h
+ /home/imkabir/c_programming/imlib/include/imlib/imerrno.h
  /home/imkabir/c_programming/imlib/include/imlib/imodlog.h
+ /home/imkabir/c_programming/imlib/include/imlib/imparam.h
+ /home/imkabir/c_programming/imlib/include/imlib/imstdinc.h
+ /home/imkabir/c_programming/imlib/include/imlib/imstr.h
  /usr/include/alloca.h
  /usr/include/bits/atomic_wide_counter.h
  /usr/include/bits/byteswap.h

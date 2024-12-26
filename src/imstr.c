@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "imlib/imlog.h"
 #include "imlib/immem.h"
 
 #include "imlib/imclass.h"
@@ -15,6 +16,8 @@
 #include "imlib/impanic.h"
 #include "imlib/imparam.h"
 #include "imlib/imstdinc.h"
+
+#include "imlib/imio.h"
 
 #define IMSTR_INITIAL_CAPACITY 16u
 
@@ -150,13 +153,21 @@ PUBLIC void ImStr_AppendReal(register struct ImStr *const self,
   ImStr_Append(self, buffer);
 }
 
+PUBLIC void ImStr_AppendObj(register struct ImStr *const self,
+                             register void *const obj) {
+  enum { MX_BUF_SIZE = 1024 };
+  auto char tmp_buf[MX_BUF_SIZE] = {0};
+  (void)imsprintf(tmp_buf, "%obj", obj);
+  ImStr_Append(self, tmp_buf);
+}
+
 PUBLIC void ImStr_VAppendFmt(register struct ImStr *const self,
                              register char const *const fmt,
                              register va_list args) {
   enum { MX_BUF_SIZE = 1024 };
   auto char tmp_buf[MX_BUF_SIZE] = {0};
 
-  (void)vsprintf(tmp_buf, fmt, args);
+  (void)imvsprintf(tmp_buf, fmt, args);
   ImStr_Append(self, tmp_buf);
 }
 

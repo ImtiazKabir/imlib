@@ -4,6 +4,7 @@
 #include <stdarg.h>
 
 #include "imlib/ansi.h"
+#include "imlib/imio.h"
 
 void imodlogv(struct IModLog *logger, unsigned char priority,
     char const *fmt, va_list args) {
@@ -22,7 +23,7 @@ void imodlogv(struct IModLog *logger, unsigned char priority,
   printf("%s%s%s", level->pre_bg, level->pre_fg, level->prefix);
   printf("%s ", ANSI_RESET);
   printf("%s%s", level->txt_bg, level->txt_fg);
-  vprintf(fmt, args);
+  imvprintf(fmt, args);
   printf("%s", ANSI_RESET);
 }
 
