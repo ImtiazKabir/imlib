@@ -81,7 +81,7 @@
     return res.value;                                                          \
   }                                                                            \
   struct ImError *RESULT_UNWRAP_ERR(tag)(struct tag const res) {               \
-    if (RESULT_IS_ERR(tag)(res)) {                                             \
+    if (RESULT_IS_OK(tag)(res)) {                                              \
       impanic("%s\n",                                                          \
               "Attempted to unwrap Ok Result of type " #type " for error.");   \
     }                                                                          \
